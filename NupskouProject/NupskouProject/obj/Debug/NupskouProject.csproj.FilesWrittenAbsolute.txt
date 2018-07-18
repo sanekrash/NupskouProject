@@ -7,3 +7,12 @@
 /home/test/gamedev/NupskouProject/NupskouProject/bin/Debug/MonoGame.Framework.dll
 /home/test/gamedev/NupskouProject/NupskouProject/bin/Debug/Newtonsoft.Json.dll
 /home/test/gamedev/NupskouProject/NupskouProject/bin/Debug/TiledSharp.dll
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/MonoGame.Framework.dll.config
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/NupskouProject.exe.mdb
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/NupskouProject.exe
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/obj/Debug/NupskouProject.exe
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/obj/Debug/NupskouProject.exe.mdb
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/MonoGame.Framework.dll
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/Newtonsoft.Json.dll
+/home/test/gamedev/nupskouproject/NupskouProject/NupskouProject/bin/Debug/TiledSharp.dll
