@@ -1,9 +1,0 @@
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/MonoGame.Framework.dll.config
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/MonogameTemplateRider.exe.mdb
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/MonogameTemplateRider.exe
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/obj/Debug/MonogameTemplateRider.exe
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/obj/Debug/MonogameTemplateRider.exe.mdb
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/MonoGame.Framework.dll
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/Newtonsoft.Json.dll
-/home/test/gamedev/MonogameTemplateRider-master/MonogameTemplateRider/bin/Debug/TiledSharp.dll
