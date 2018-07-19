@@ -1,7 +1,7 @@
 ﻿namespace NupskouProject
 {
-    static class the
+    static class The
     {
-        
+        static Assets Assets;
     }
 }

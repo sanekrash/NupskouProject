@@ -16,6 +16,7 @@ namespace NupskouProject
                 PreferredBackBufferWidth = 1050,
                 PreferredBackBufferHeight = 750,
                 PreferMultiSampling = true,
+                
             };
         }
 
@@ -49,6 +50,7 @@ namespace NupskouProject
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
+            spriteBatch.Draw(The.Assets.SidePanel);
             spriteBatch.End();
 
             base.Draw(gameTime);
