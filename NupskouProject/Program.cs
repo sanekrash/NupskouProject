@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MonoGameTemplateRider
+namespace NupskouProject
 {
     public static class Program
     {

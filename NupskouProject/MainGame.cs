@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonoGameTemplateRider
+namespace NupskouProject
 {
     public class MainGame : Game
     {
@@ -11,8 +11,14 @@ namespace MonoGameTemplateRider
         
         public MainGame()
         {
-            graphicsDevice = new GraphicsDeviceManager(this) {PreferMultiSampling = true};
-        }
+            graphicsDevice = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferWidth = 1050,
+                PreferredBackBufferHeight = 750,
+                PreferMultiSampling = true,
+
+            };
+            }
 
         protected override void Initialize()
         {
