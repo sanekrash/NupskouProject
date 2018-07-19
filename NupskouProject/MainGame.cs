@@ -28,6 +28,8 @@ namespace NupskouProject
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            The.Assets.SidePanel = Content.Load<Texture2D>("nupskou-side-panel");
+
         }
 
         protected override void UnloadContent()

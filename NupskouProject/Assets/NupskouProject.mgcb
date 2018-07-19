@@ -1,7 +1,7 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin/Debug
+/outputDir:../bin/Debug
 /intermediateDir:obj
 /platform:DesktopGL
 /config:
