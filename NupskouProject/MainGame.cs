@@ -15,6 +15,7 @@ namespace NupskouProject
             {
                 PreferredBackBufferWidth = 1050,
                 PreferredBackBufferHeight = 750,
+                
                 PreferMultiSampling = true,
                 
             };
@@ -48,10 +49,10 @@ namespace NupskouProject
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(The.Assets.SidePanel);
+            spriteBatch.Draw(The.Assets.SidePanel, new Rectangle(600,0,450,750), Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
