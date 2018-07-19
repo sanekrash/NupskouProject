@@ -16,9 +16,8 @@ namespace NupskouProject
                 PreferredBackBufferWidth = 1050,
                 PreferredBackBufferHeight = 750,
                 PreferMultiSampling = true,
-
             };
-            }
+        }
 
         protected override void Initialize()
         {
