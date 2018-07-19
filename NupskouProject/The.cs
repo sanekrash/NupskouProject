@@ -2,6 +2,6 @@
 {
     static class The
     {
-        static Assets Assets;
+        public static Assets Assets;
     }
 }
