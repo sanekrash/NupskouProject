@@ -2,8 +2,7 @@
 {
     static class The
     {
-        public static Assets Assets;
-        
+        public static Assets Assets = new Assets();
     }
     
 }
