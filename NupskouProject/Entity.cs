@@ -1,6 +1,6 @@
 ﻿namespace NupskouProject {
 
-    internal abstract class Entity {
+    public abstract class Entity {
 
         public void Render () {}
 
@@ -9,7 +9,7 @@
     }
 
 
-    internal class Bullet : Entity {
+    public class Bullet : Entity {
 
         public void Render () {}
 
