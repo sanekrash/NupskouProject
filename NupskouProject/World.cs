@@ -10,7 +10,7 @@ namespace NupskouProject {
 
         public void Spawn (Entity entity) {
             _entities.Add (entity);
-            // _entities.OnSpawn ();
+            // _entity.OnSpawn ();
         }
 
 
