@@ -1,14 +1,20 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace NupskouProject
-{
-    public class Assets
-    {
+
+namespace NupskouProject {
+
+    public class Assets {
+
         public Texture2D SidePanel;
+        public Texture2D RoundBullet;
+
 
         public void Load (ContentManager content) {
-            SidePanel = content.Load<Texture2D>("nupskou-side-panel");
+            SidePanel   = content.Load <Texture2D> ("nupskou-side-panel");
+            RoundBullet = content.Load <Texture2D> ("round-bullet");
         }
+
     }
+
 }

@@ -1,16 +1,11 @@
-﻿namespace NupskouProject
-{
-    public class World
-    {
-        public void Render()
-        {
-    
-        }
+﻿namespace NupskouProject {
 
-        public void Update()
-        {
-            
-        }
+    public class World {
+
+        public void Render () {}
+
+        public void Update () {}
+
     }
-    }
-    
+
+}
