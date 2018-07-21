@@ -2,9 +2,8 @@
 
     public class Bullet : Entity {
 
-        public void Render () {}
-
-        public void Update () {}
+        public override void Update () {}
+        public override void Render () {}
 
     }
 

@@ -26,7 +26,7 @@ namespace NupskouProject {
 
 
         protected override void LoadContent () {
-            _spriteBatch = new SpriteBatch (GraphicsDevice);
+            The.SpriteBatch = _spriteBatch = new SpriteBatch (GraphicsDevice);
             The.Assets.Load (Content);
         }
 
