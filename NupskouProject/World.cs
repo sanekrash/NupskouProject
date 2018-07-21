@@ -13,9 +13,19 @@ namespace NupskouProject {
             // _entities.OnSpawn ();
         }
 
-        
-        public void Render () {}
-        public void Update () {}
+
+        public void Update () {
+            for (int i = 0; i < _entities.Count; i++) {
+                _entities[i].Update ();
+            }
+        }
+
+
+        public void Render () {
+            for (int i = 0; i < _entities.Count; i++) {
+                _entities[i].Render ();
+            }
+        }
 
     }
 
