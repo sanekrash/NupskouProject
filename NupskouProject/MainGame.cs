@@ -7,12 +7,12 @@ namespace NupskouProject {
 
     public class MainGame : Game {
 
-        private GraphicsDeviceManager graphicsDevice;
-        private SpriteBatch           spriteBatch;
+        private GraphicsDeviceManager _graphicsDevice;
+        private SpriteBatch           _spriteBatch;
 
 
         public MainGame () {
-            graphicsDevice = new GraphicsDeviceManager (this) {
+            _graphicsDevice = new GraphicsDeviceManager (this) {
                 PreferredBackBufferWidth  = 1050,
                 PreferredBackBufferHeight = 750,
                 PreferMultiSampling       = true,
@@ -26,7 +26,7 @@ namespace NupskouProject {
 
 
         protected override void LoadContent () {
-            spriteBatch = new SpriteBatch (GraphicsDevice);
+            _spriteBatch = new SpriteBatch (GraphicsDevice);
             The.Assets.Load (Content);
         }
 
@@ -48,9 +48,9 @@ namespace NupskouProject {
         protected override void Draw (GameTime gameTime) {
             GraphicsDevice.Clear (Color.Black);
 
-            spriteBatch.Begin ();
-            spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
-            spriteBatch.End ();
+            _spriteBatch.Begin ();
+            _spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
+            _spriteBatch.End ();
 
             base.Draw (gameTime);
         }
