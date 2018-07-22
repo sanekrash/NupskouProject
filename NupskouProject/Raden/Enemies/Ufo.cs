@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.MathUtils;
+using NupskouProject.Raden.Bullets;
 using NupskouProject.Utils;
 
 
@@ -101,6 +102,12 @@ namespace NupskouProject.Raden.Enemies {
             
             if (t > 0 && !World.Box.ContainsPoint (_p)) {
                 Despawn ();
+                return;
+            }
+
+            if (t % 10 == 0) {
+                The.World.Spawn (new Rocket (_p, (new XY(300, 600) - _p).WithLength (2), Color.Magenta));
+                The.World.Spawn (new Rocket (_p, new XY(0, 1.5f), Color.Yellow));
             }
         }
 

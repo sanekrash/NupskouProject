@@ -29,6 +29,38 @@ namespace NupskouProject.Utils {
         }
 
 
+        public static void DrawRocket (
+            this SpriteBatch batch,
+            XY center,
+            float rotation,
+            Color color,
+            float size
+        ) {
+            batch.Draw (
+                The.Assets.Rocket,
+                center,
+                new Rectangle (0, 0, 256, 128),
+                color,
+                rotation,
+                new Vector2 (128, 64),
+                size / 40f,
+                SpriteEffects.None,
+                0
+            );
+            batch.Draw (
+                The.Assets.Rocket,
+                center,
+                new Rectangle (0, 128, 256, 128),
+                Color.White,
+                rotation,
+                new Vector2 (128, 64),
+                size / 40f,
+                SpriteEffects.None,
+                0
+            );
+        }
+
+
         [Obsolete]
         public static void DrawRoundBullet (
             this SpriteBatch batch,
