@@ -9,7 +9,7 @@ namespace NupskouProject {
 
 
         public World () {
-            Spawn (new Bullet (new XY (10, 10)));
+            Spawn (new Bullet (new XY (100, 100)));
         }
 
 

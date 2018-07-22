@@ -42,6 +42,7 @@ namespace NupskouProject {
                 Exit ();
             }
             base.Update (gameTime);
+
         }
 
 
@@ -50,6 +51,7 @@ namespace NupskouProject {
             GraphicsDevice.Clear (Color.Black);
 
             _spriteBatch.Begin ();
+            The.World.Render();
             _spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
             _spriteBatch.End ();
 
