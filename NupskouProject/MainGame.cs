@@ -21,7 +21,9 @@ namespace NupskouProject {
 
 
         protected override void Initialize () {
+            
             base.Initialize ();
+
         }
 
 
