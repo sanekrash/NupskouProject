@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 
@@ -26,7 +27,7 @@ namespace NupskouProject {
             int dt = world.Time - _t0 + 256;
             float angle = (dt * dt + dt) * Mathf.PI / 512;
 //            float angle = dt / 20f;
-            world.Spawn (new Bullet (_p, new XY(angle)));
+            world.Spawn (new Bullet (_p, new XY(angle), Color.CornflowerBlue));
         }
         
 /*/

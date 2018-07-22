@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NupskouProject.Math;
-using NupskouProject.Raden;
 
 
 namespace NupskouProject {
@@ -27,9 +27,7 @@ namespace NupskouProject {
             
             Time++;
 
-            if (Time == 0) {
-                Spawn (new Spawner (Box.Center));
-            }
+            OnUpdate ();
             
             for (int i = 0; i < _entities.Count; i++) {
                 var entity = _entities[i];
@@ -41,6 +39,18 @@ namespace NupskouProject {
 //                entity.Update ();
 //            }
 //            _entities.ClearDespawned ();
+
+            Console.WriteLine (_entities.Count);
+        }
+
+
+        protected virtual void OnUpdate () {
+            if (Time == 0) {
+//                foreach (var offset in Danmaku.Ring (XY.Up * 200, 5)) {
+//                    Spawn (new Spawner (Box.Center + offset));
+//                }
+                Spawn (new Spawner (Box.Center));
+            }
         }
 
 
