@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 
 
 namespace NupskouProject {
 
     public class World {
-
+        
+        public static int Time = -1;
         private List <Entity> _entities = new List <Entity> ();
 
 
@@ -31,6 +33,7 @@ namespace NupskouProject {
                 _entities[i].Render ();
             }
         }
+
 
 
     }
