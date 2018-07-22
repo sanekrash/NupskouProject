@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 
@@ -6,26 +7,27 @@ namespace NupskouProject {
 
     public static class SpriteBatchExtension {
 
- /*       public static void DrawCircle (
+        public static void DrawCircle (
             this SpriteBatch batch,
             XY center,
             Color color,
-            float size,
-            float drawOrder
+            float radius
         ) {
             batch.Draw (
-                The.Assets.Circle,
+                The.Assets.RoundBullet,
                 center,
-                new Rectangle (0, 0, 256, 256),
+                new Rectangle (0, 0, 128, 128),
                 color,
                 0,
                 new Vector2 (128, 128),
-                size / 128f,
+                radius / 40f,
                 SpriteEffects.None,
-                drawOrder
+                0
             );
         }
-*/
+
+
+        [Obsolete]
         public static void DrawRoundBullet (
             this SpriteBatch batch,
             XY center,
@@ -45,7 +47,7 @@ namespace NupskouProject {
                 drawOrder
             );
         }
+
     }
 
 }
-
