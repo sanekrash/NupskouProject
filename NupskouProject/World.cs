@@ -6,7 +6,7 @@ namespace NupskouProject {
 
     public class World {
         
-        public static int Time = -1;
+        public int Time = -1;
         private List <Entity> _entities = new List <Entity> ();
 
 
