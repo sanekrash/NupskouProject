@@ -1,5 +1,9 @@
-﻿namespace NupskouProject
+﻿using System;
+
+
+namespace NupskouProject
 {
+    [Obsolete]
     public class DrawOrder
     {
         public static float Hitbox         = 0;
