@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NupskouProject.Math;
+using NupskouProject.Raden;
 
 
 namespace NupskouProject {
@@ -12,6 +13,7 @@ namespace NupskouProject {
         public int Time = -1;
 
         private List <Entity> _entities = new List <Entity> ();
+//        private EntityList _entities = new EntityList();
 
 
         public void Spawn (Entity entity) {
@@ -32,6 +34,10 @@ namespace NupskouProject {
             for (int i = 0; i < _entities.Count; i++) {
                 _entities[i].Update ();
             }
+//            foreach (var entity in _entities) {
+//                entity.Update ();
+//            }
+//            _entities.ClearDespawned ();
         }
 
 
@@ -39,6 +45,9 @@ namespace NupskouProject {
             for (int i = 0; i < _entities.Count; i++) {
                 _entities[i].Render ();
             }
+//            foreach (var entity in _entities) {
+//                entity.Render ();
+//            }
         }
 
     }

@@ -4,49 +4,22 @@ using System.Linq;
 
 
 namespace NupskouProject.Raden {
+    
+    public class EntityList : List <Entity> {
 
-    public class EntityList : IList <Entity> {
+        public EntityList () : base () {}
+        public EntityList (int capacity) : base (capacity) {}
+        public EntityList (IEnumerable <Entity> collection) : base (collection) {}
 
-        private List <Entity> _entities;
-
-
-        public EntityList ()                                { _entities = new List <Entity> (); }
-        public EntityList (int capacity)                    { _entities = new List <Entity> (capacity); }
-        public EntityList (IEnumerable <Entity> collection) { _entities = new List <Entity> (collection); }
-
-
-        public IEnumerator <Entity> GetEnumerator () => new EntityListEnumerator (_entities);
-        IEnumerator IEnumerable.    GetEnumerator () => GetEnumerator ();
-
-        
-        public void Add (Entity item)                       { _entities.Add (item); }
-        public void Clear ()                                { _entities.Clear (); }
-        public bool Contains (Entity item)                  => _entities.Contains (item);
-        public void CopyTo (Entity[] array, int arrayIndex) { _entities.CopyTo (array, arrayIndex); }
-        public bool Remove (Entity item)                    => _entities.Remove (item);
+        public new IEnumerator <Entity> GetEnumerator () => new EntityListEnumerator (this);
 
 
-        public int Count => _entities.Count;
-
-
-        public bool IsReadOnly => false;
-
-
-        public int  IndexOf (Entity item)           => _entities.IndexOf (item);
-        public void Insert (int index, Entity item) { _entities.Insert (index, item); }
-        public void RemoveAt (int index)            { _entities.RemoveAt (index); }
-
-
-        public Entity this [int index] {
-            get { return _entities[index]; }
-            set { _entities[index] = value; }
+        public void ClearDespawned () {
+            RemoveAll (e => e.Despawned);
         }
 
-
-        public void ClearDespawned () { _entities = _entities.Where (e => !e.Despawned).ToList (); }
-
     }
-
+    
 
     public class EntityListEnumerator : IEnumerator <Entity> {
 
@@ -62,7 +35,7 @@ namespace NupskouProject.Raden {
 
         public bool MoveNext () {
             while (++i < _list.Count) {
-                if (!Current.Despawned) return true;
+                if (!_list[i].Despawned) return true;
             }
             return false;
         }
