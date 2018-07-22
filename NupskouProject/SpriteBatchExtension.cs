@@ -19,7 +19,7 @@ namespace NupskouProject {
                 new Rectangle (0, 0, 128, 128),
                 color,
                 0,
-                new Vector2 (128, 128),
+                new Vector2 (64, 64),
                 radius / 40f,
                 SpriteEffects.None,
                 0
