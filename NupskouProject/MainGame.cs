@@ -45,6 +45,7 @@ namespace NupskouProject {
         }
 
 
+
         protected override void Draw (GameTime gameTime) {
             GraphicsDevice.Clear (Color.Black);
 
