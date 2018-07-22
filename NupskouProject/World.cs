@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NupskouProject.Math;
+using NupskouProject.Raden.Skills;
 
 
 namespace NupskouProject {
@@ -46,10 +47,7 @@ namespace NupskouProject {
 
         protected virtual void OnUpdate () {
             if (Time == 0) {
-//                foreach (var offset in Danmaku.Ring (XY.Up * 200, 5)) {
-//                    Spawn (new Spawner (Box.Center + offset));
-//                }
-                Spawn (new Spawner (Box.Center));
+                Spawn (new UfoSpawner());
             }
         }
 

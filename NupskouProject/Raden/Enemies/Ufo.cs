@@ -31,7 +31,7 @@ namespace NupskouProject.Raden.Enemies {
                             worldBox.Left,
                             Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0.1f, 0.6f))
                         ),
-                        new XY (random.Float (1, 1.5f), 0),
+                        new XY (random.Float (2, 3), 0),
                         0
                     );
                     break;
@@ -42,7 +42,7 @@ namespace NupskouProject.Raden.Enemies {
                             worldBox.Right,
                             Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0.1f, 0.6f))
                         ),
-                        new XY (-random.Float (1, 1.5f), 0),
+                        new XY (-random.Float (2, 3), 0),
                         0
                     );
                     break;
@@ -51,10 +51,10 @@ namespace NupskouProject.Raden.Enemies {
                     Init (
                         new XY (
                             worldBox.Left,
-                            Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0.1f, 0.6f))
+                            Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0, 0.4f))
                         ),
-                        new XY (random.Float (1, 1.5f), random.Float(0.4f, 0.6f)),
-                        -0.005f
+                        new XY (random.Float (2, 3), random.Float(1.5f, 2.5f)),
+                        -0.02f
                     );
                     break;
                 case 3:
@@ -62,10 +62,10 @@ namespace NupskouProject.Raden.Enemies {
                     Init (
                         new XY (
                             worldBox.Right,
-                            Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0.1f, 0.6f))
+                            Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0, 0.4f))
                         ),
-                        new XY (-random.Float (1, 1.5f), random.Float(0.4f, 0.6f)),
-                        -0.005f
+                        new XY (-random.Float (2, 3), random.Float(1.5f, 2.5f)),
+                        -0.02f
                     );
                     break;
                 case 4:
@@ -75,8 +75,8 @@ namespace NupskouProject.Raden.Enemies {
                             Mathf.Lerp (worldBox.Left, worldBox.Right, random.Float (0.1f, 0.8f)),
                             worldBox.Top
                         ),
-                        new XY (0, random.Float(0.8f, 1)),
-                        -0.005f
+                        new XY (0, random.Float(2, 3)),
+                        -0.02f
                     );
                     break;
             }
@@ -99,7 +99,7 @@ namespace NupskouProject.Raden.Enemies {
             int t = The.World.Time - _t0;
             _p = _p0 + t * _v0 + new XY (0, t * t * _a * 0.5f);
             
-            if (t > 0 && World.Box.ContainsPoint (_p)) {
+            if (t > 0 && !World.Box.ContainsPoint (_p)) {
                 Despawn ();
             }
         }
