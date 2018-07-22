@@ -7,6 +7,11 @@ namespace NupskouProject {
 
         private List <Entity> _entities;
 
+        public World()
+        {
+            Spawn(new Bullet(new XY(10, 10)));
+        }
+
 
         public void Spawn (Entity entity) {
             _entities.Add (entity);
@@ -26,6 +31,7 @@ namespace NupskouProject {
                 _entities[i].Render ();
             }
         }
+        
 
     }
 
