@@ -32,8 +32,11 @@ namespace NupskouProject {
             }
             
             for (int i = 0; i < _entities.Count; i++) {
-                _entities[i].Update ();
+                var entity = _entities[i];
+                if (entity.Despawned) continue;
+                entity.Update ();
             }
+            _entities.RemoveAll (e => e.Despawned);
 //            foreach (var entity in _entities) {
 //                entity.Update ();
 //            }
