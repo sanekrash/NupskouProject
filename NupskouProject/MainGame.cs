@@ -35,14 +35,14 @@ namespace NupskouProject {
 
 
         protected override void Update (GameTime gameTime) {
-            if (
-                GamePad.GetState (PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                Keyboard.GetState ().IsKeyDown (Keys.Escape)
-            ) {
-                Exit ();
-            }
-            base.Update (gameTime);
+            var kbd = Keyboard.GetState ();
+            
+            if (kbd.IsKeyDown (Keys.Escape)) Exit ();
+            if (kbd.IsKeyDown (Keys.P)) The.World.Paused = !The.World.Paused;
 
+            The.World.Update ();
+            
+            base.Update (gameTime);
         }
 
 

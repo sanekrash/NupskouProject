@@ -14,6 +14,9 @@
             Right  = right;
             Bottom = bottom;
         }
+        
+        
+        public XY Center => 0.5f * new XY(Left + Right, Top + Bottom);
 
     }
 

@@ -7,27 +7,28 @@ namespace NupskouProject {
     public class Bullet : Entity {
 
         private readonly XY _p0;
-        //private readonly XY _v;
+        private readonly XY _v;
 
-        //private int _t0;
+        private int _t0;
         private XY _p;
 
 
-        public Bullet (XY p0 /*, XY v*/) {
+        public Bullet (XY p0 , XY v) {
             _p = _p0 = p0;
-            //_v = v;
+            _v = v;
         }
 
 
-/*
         public override void OnSpawn () {
+            _t0 = The.World.Time;
         }
-        public override void OnDespawn () {}*/
-        public override void Update () { /* 
-               _p = _p0 + (The.Time - _t0) * _v;
-            if (!Geom.CircleOverBox (new Circle (_p, 4), World.Box)) {
-                Despawn ();
-            }*/
+
+
+        public override void Update () {
+            _p = _p0 + (The.World.Time - _t0) * _v;
+//            if (!Geom.CircleOverBox (new Circle (_p, 4), World.Box)) {
+//                Despawn ();
+//            }
         }
 
 

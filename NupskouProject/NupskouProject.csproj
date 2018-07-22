@@ -58,6 +58,7 @@
     <Compile Include="Mathf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spawner.cs" />
     <Compile Include="SpriteBatchExtension.cs" />
     <Compile Include="The.cs" />
     <Compile Include="World.cs" />
