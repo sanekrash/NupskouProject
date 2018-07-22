@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public static class Program {
 

@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
-namespace NupskouProject {
+
+namespace NupskouProject.Math {
 
     public struct XY {
 

@@ -1,9 +1,11 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NupskouProject.Core;
+using NupskouProject.Math;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Utils {
 
     public static class SpriteBatchExtension {
 

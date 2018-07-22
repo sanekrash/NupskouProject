@@ -1,4 +1,4 @@
-﻿namespace NupskouProject {
+﻿namespace NupskouProject.Math {
 
     public struct Circle {
 

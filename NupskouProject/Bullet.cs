@@ -1,5 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NupskouProject.Core;
+using NupskouProject.Math;
+using NupskouProject.Utils;
 
 
 namespace NupskouProject {

@@ -1,30 +1,28 @@
-﻿using System;
-
-namespace NupskouProject {
+﻿namespace NupskouProject.Math {
 
     public static partial class Mathf {
 
-        public static float Sin (float f)            { return (float) Math.Sin (f); }
-        public static float Cos (float f)            { return (float) Math.Cos (f); }
-        public static float Tan (float f)            { return (float) Math.Tan (f); }
-        public static float Asin (float f)           { return (float) Math.Asin (f); }
-        public static float Acos (float f)           { return (float) Math.Acos (f); }
-        public static float Atan (float f)           { return (float) Math.Atan (f); }
-        public static float Atan2 (float y, float x) { return (float) Math.Atan2 (y, x); }
-        public static float Sqrt (float f)           { return (float) Math.Sqrt (f); }
-        public static float Pow (float f, float p)   { return (float) Math.Pow (f, p); }
-        public static float Exp (float power)        { return (float) Math.Exp (power); }
-        public static float Log (float f, float p)   { return (float) Math.Log (f, p); }
-        public static float Log (float f)            { return (float) Math.Log (f); }
-        public static float Log10 (float f)          { return (float) Math.Log10 (f); }
-        public static float Ceil (float f)           { return (float) Math.Ceiling (f); }
-        public static float Floor (float f)          { return (float) Math.Floor (f); }
-        public static float Round (float f)          { return (float) Math.Round (f); }
-        public static int   CeilToInt (float f)      { return (int) Math.Ceiling (f); }
-        public static int   FloorToInt (float f)     { return (int) Math.Floor (f); }
-        public static int   RoundToInt (float f)     { return (int) Math.Round (f); }
+        public static float Sin (float f)            { return (float) System.Math.Sin (f); }
+        public static float Cos (float f)            { return (float) System.Math.Cos (f); }
+        public static float Tan (float f)            { return (float) System.Math.Tan (f); }
+        public static float Asin (float f)           { return (float) System.Math.Asin (f); }
+        public static float Acos (float f)           { return (float) System.Math.Acos (f); }
+        public static float Atan (float f)           { return (float) System.Math.Atan (f); }
+        public static float Atan2 (float y, float x) { return (float) System.Math.Atan2 (y, x); }
+        public static float Sqrt (float f)           { return (float) System.Math.Sqrt (f); }
+        public static float Pow (float f, float p)   { return (float) System.Math.Pow (f, p); }
+        public static float Exp (float power)        { return (float) System.Math.Exp (power); }
+        public static float Log (float f, float p)   { return (float) System.Math.Log (f, p); }
+        public static float Log (float f)            { return (float) System.Math.Log (f); }
+        public static float Log10 (float f)          { return (float) System.Math.Log10 (f); }
+        public static float Ceil (float f)           { return (float) System.Math.Ceiling (f); }
+        public static float Floor (float f)          { return (float) System.Math.Floor (f); }
+        public static float Round (float f)          { return (float) System.Math.Round (f); }
+        public static int   CeilToInt (float f)      { return (int) System.Math.Ceiling (f); }
+        public static int   FloorToInt (float f)     { return (int) System.Math.Floor (f); }
+        public static int   RoundToInt (float f)     { return (int) System.Math.Round (f); }
 
-        public const float PI      = (float) Math.PI;
+        public const float PI      = (float) System.Math.PI;
         public const float Deg2Rad = PI * 2F / 360F;
         public const float Rad2Deg = 1F / Deg2Rad;
 
@@ -105,7 +103,7 @@ namespace NupskouProject {
 
         public static float PingPong (float t, float length) {
             t = Repeat (t, length * 2F);
-            return length - Math.Abs (t - length);
+            return length - System.Math.Abs (t - length);
         }
 
 

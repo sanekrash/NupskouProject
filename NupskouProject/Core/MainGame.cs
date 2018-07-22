@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Core {
 
     public class MainGame : Game {
 
@@ -21,9 +21,7 @@ namespace NupskouProject {
 
 
         protected override void Initialize () {
-            
             base.Initialize ();
-
         }
 
 

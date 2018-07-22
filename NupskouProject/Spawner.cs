@@ -1,5 +1,6 @@
 ﻿using System;
-using NupskouProject.MathUtils;
+using NupskouProject.Core;
+using NupskouProject.Math;
 
 
 namespace NupskouProject {
