@@ -5,11 +5,11 @@ namespace NupskouProject {
 
     public class World {
 
-        private List <Entity> _entities;
+        private List <Entity> _entities = new List <Entity> ();
 
-        public World()
-        {
-            Spawn(new Bullet(new XY(10, 10)));
+
+        public World () {
+            Spawn (new Bullet (new XY (10, 10)));
         }
 
 
@@ -31,7 +31,7 @@ namespace NupskouProject {
                 _entities[i].Render ();
             }
         }
-        
+
 
     }
 
