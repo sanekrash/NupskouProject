@@ -58,6 +58,7 @@
     <Compile Include="Math\Box.cs" />
     <Compile Include="Math\Circle.cs" />
     <Compile Include="Math\Danmaku.cs" />
+    <Compile Include="Math\Geom.cs" />
     <Compile Include="Math\Mathf.cs" />
     <Compile Include="Math\XY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +73,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Raden\Enemies" />
+    <Folder Include="Raden\Skills" />
+    <Folder Include="Raden\Stages" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MonoGame.Framework.DesktopGL.Core.3.7.0.7\build\MonoGame.Framework.DesktopGL.Core.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.Core.3.7.0.7\build\MonoGame.Framework.DesktopGL.Core.targets')" />

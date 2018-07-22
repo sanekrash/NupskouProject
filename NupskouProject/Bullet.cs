@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.MathUtils;
 using NupskouProject.Utils;
 
 
@@ -29,16 +30,15 @@ namespace NupskouProject {
 
         public override void Update () {
             _p = _p0 + (The.World.Time - _t0) * _v;
-//            if (!Geom.CircleOverBox (new Circle (_p, 4), World.Box)) {
-//                Despawn ();
-//            }
+            if (!Geom.CircleOverBox (new Circle (_p, 6), World.Box)) {
+                Despawn ();
+            }
         }
 
 
         public override void Render () {
-            The.SpriteBatch.DrawCircle (_p, Color.Lime,  6f);
-            The.SpriteBatch.DrawCircle (_p, Color.Green, 4.5f);
-            The.SpriteBatch.DrawCircle (_p, Color.White, 4f);
+            The.SpriteBatch.DrawCircle (_p, Color.Lime,  6);
+            The.SpriteBatch.DrawCircle (_p, Color.White, 4);
         }
                                                    
     }
