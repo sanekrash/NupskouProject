@@ -7,7 +7,7 @@ using NupskouProject.Utils;
 
 namespace NupskouProject.Rashka.Bullets {
 
-    public class BounceBullet : Entity {
+    public class BounceArrow : Entity {
 
         private readonly XY    _p0;
         private readonly XY    _v;
@@ -17,7 +17,7 @@ namespace NupskouProject.Rashka.Bullets {
         private XY  _p;
 
 
-        public BounceBullet (XY p0, XY v, Color color) {
+        public BounceArrow (XY p0, XY v, Color color) {
             _p     = _p0 = p0;
             _v     = v;
             _color = color;
@@ -37,7 +37,9 @@ namespace NupskouProject.Rashka.Bullets {
             _p = _p0 + (The.World.Time - _t0) * _v;
             if (!Geom.CircleInBox (new Circle (_p, 6), World.Box)) {
                 Despawn ();
-                The.World.Spawn (new Bullet (_p, -_v, _color));
+                foreach (var v in Danmaku.Spray(-_v , Mathf.PI / 4 , 3) ) {
+                    The.World.Spawn (new Bullet(_p, v, _color)) ;
+                }
 
             }
         }

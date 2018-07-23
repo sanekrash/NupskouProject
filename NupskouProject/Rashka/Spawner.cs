@@ -28,7 +28,7 @@ namespace NupskouProject {
             int dt = world.Time - _t0 + 256;
             float angle = (dt * dt + dt) * Mathf.PI / 512;
 //            float angle = dt / 20f;
-            world.Spawn (new BounceBullet (_p, new XY(angle), Color.CornflowerBlue));
+            world.Spawn (new BounceArrow(_p, new XY(angle), Color.CornflowerBlue));
         }
 
     }
