@@ -22,9 +22,12 @@
         public static int   FloorToInt (float f)     { return (int) System.Math.Floor (f); }
         public static int   RoundToInt (float f)     { return (int) System.Math.Round (f); }
 
-        public const float PI      = (float) System.Math.PI;
-        public const float Deg2Rad = PI * 2F / 360F;
-        public const float Rad2Deg = 1F / Deg2Rad;
+        public const float PI       = (float) System.Math.PI;
+        public const float Deg2Rad  = 2 * PI / 360;
+        public const float Rad2Deg  = 1 / Deg2Rad;
+        public const float Phi      = 1.61803398875f;
+        public const float phi      = 0.61803398875f;
+        public const float phiAngle = 2f * PI * phi;
 
 
         public static float Clamp (float value, float min, float max) {
