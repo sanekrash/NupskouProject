@@ -9,8 +9,9 @@ namespace NupskouProject {
 
     public class World {
 
-        public static Box Box       => new Box (0, 0, 600, 750);
-        public static XY  BossPlace => new XY (300, 300);
+        public static Box Box         => new Box (0, 0, 600, 750);
+        public static XY  BossPlace   => new XY (300, 250);
+        public static XY  PlayerPlace => new XY (300, 500);
 
         public bool Paused;
         public int  Time = -1;
@@ -48,6 +49,9 @@ namespace NupskouProject {
 
 
         protected virtual void OnUpdate () {
+            if (Time == 0) {
+                Spawn (new Player (PlayerPlace));
+            }
             if (Time == 60) {
 //                Spawn (new RocketSpawner(Box.Center));
 //                Spawn (new UfoSpawner ());
