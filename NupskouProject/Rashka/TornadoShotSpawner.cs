@@ -11,7 +11,7 @@ namespace NupskouProject.Rashka
 
         private XY _p;
         private int _t0;
-
+        private float _angle;
 
         public TornadoShotSpawner(XY p)
         {
@@ -29,7 +29,8 @@ namespace NupskouProject.Rashka
         {
             if ((The.World.Time - _t0) % 60 == 0)
             {
-                foreach (var v in Danmaku.Ring(new XY(_t0), 15))
+                _angle = (float) (The.World.Time - _t0); // 222/180 = 1,24
+                foreach (var v in Danmaku.Ring(new XY(_angle) , 15))
                 {
                     The.World.Spawn(new BounceArrow(_p, v, Color.Blue));
                 }
