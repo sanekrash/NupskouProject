@@ -5,13 +5,13 @@ using NupskouProject.Raden.Bullets;
 
 namespace NupskouProject.Rashka {
 
-    public class TornadoShot : Entity {
+    public class TornadoShotSpawner : Entity {
 
         private XY  _p;
         private int _t0;
 
 
-        public TornadoShot (XY p) { _p = p; }
+        public TornadoShotSpawner (XY p) { _p = p; }
 
 
         public override void OnSpawn () {
@@ -21,8 +21,8 @@ namespace NupskouProject.Rashka {
 
         public override void Update () {
             if ((The.World.Time - _t0) % 60 == 0) {
-                The.World.Spawn (new ExplosiveRocket (_p, 2,    The.PlayerXY,                      Color.Lime));
-                The.World.Spawn (new ExplosiveRocket (_p, 1.5f, XY.Lerp (_p, The.PlayerXY, 0.75f), Color.Lime));
+                foreach (var v in Danmaku.Ring(new XY(The.Random.Next(360)), 15))
+                    The.World.Spawn (new Bullet (_p, v, Color.Red));
             }
         }
 

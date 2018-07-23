@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NupskouProject.Math;
 using NupskouProject.Raden.Skills;
+using NupskouProject.Rashka;
 
 
 namespace NupskouProject {
@@ -49,7 +50,7 @@ namespace NupskouProject {
             if (Time == 60) {
 //                Spawn (new RocketSpawner(Box.Center));
 //                Spawn (new UfoSpawner ());
-                Spawn (new SunflowerSpawner ());
+                Spawn (new TornadoShotSpawner(new XY(256,256)));
             }
         }
 

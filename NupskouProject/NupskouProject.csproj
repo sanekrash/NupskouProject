@@ -75,7 +75,7 @@
     <Compile Include="Raden\Skills\UfoSpawner.cs" />
     <Compile Include="Raden\Stages\TestStage.cs" />
     <Compile Include="Rashka\Spawner.cs" />
-    <Compile Include="Rashka\TornadoShot.cs" />
+    <Compile Include="Rashka\TornadoShotSpawner.cs" />
     <Compile Include="Utils\RandomExtension.cs" />
     <Compile Include="Utils\SpriteBatchExtension.cs" />
     <Compile Include="World.cs" />
