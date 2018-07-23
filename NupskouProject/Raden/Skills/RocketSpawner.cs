@@ -22,8 +22,8 @@ namespace NupskouProject.Raden.Skills {
 
         public override void Update () {
             if ((The.World.Time - _t0) % 60 == 0) {
-                The.World.Spawn (new ExplosiveRocket (_p, 2,    The.PlayerXY,                      Color.Lime));
-                The.World.Spawn (new ExplosiveRocket (_p, 1.5f, XY.Lerp (_p, The.PlayerXY, 0.75f), Color.Lime));
+                The.World.Spawn (new ExplosiveRocket (_p, 2,    The.Player.Position,                      Color.Lime));
+                The.World.Spawn (new ExplosiveRocket (_p, 1.5f, XY.Lerp (_p, The.Player.Position, 0.75f), Color.Lime));
             }
         }
 

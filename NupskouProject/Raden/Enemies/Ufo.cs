@@ -104,7 +104,7 @@ namespace NupskouProject.Raden.Enemies {
             }
 
             if (t % 15 == 0) {
-                The.World.Spawn (new PetalBullet (_p, (The.PlayerXY - _p).WithLength (2), Color.Magenta));
+                The.World.Spawn (new PetalBullet (_p, (The.Player.Position - _p).WithLength (2), Color.Magenta));
                 The.World.Spawn (new PetalBullet (_p, new XY(0, 1.5f), Color.Yellow));
             }
         }

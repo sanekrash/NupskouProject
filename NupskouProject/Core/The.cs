@@ -13,9 +13,7 @@ namespace NupskouProject.Core {
         public static Random      Random     = new Random ();
         public static Difficulty  Difficulty = Difficulty.Normal;
         public static SpriteBatch SpriteBatch;
-
-
-        public static XY PlayerXY => ((XY) Mouse.GetState ().Position).Clamped (World.Box);
+        public static Player Player;
 
     }
 
