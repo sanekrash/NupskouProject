@@ -13,8 +13,8 @@ namespace NupskouProject.Raden.Skills {
 
 
         public override void Update () {
-            int t        = The.World.Time - _t0;
-            if (t % 10 == 0) {
+            int t = The.World.Time - _t0;
+            if (t % 15 == 0) {
                 SpawnDigits ();
             }
         }
@@ -27,7 +27,7 @@ namespace NupskouProject.Raden.Skills {
             }
             ar.Shuffle (The.Random);
             for (int i = 0; i < 20; i++) {
-                The.World.Spawn (new Digit (ar[i], i, 10));
+                The.World.Spawn (new Digit (ar[i], i, 15));
             }
         }
 
