@@ -3,14 +3,16 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.Utils;
 
 
 namespace NupskouProject {
 
     public class Player : Entity {
 
-        private XY  _p;
-        private int _t0;
+        private XY   _p;
+        private int  _t0;
+        private bool _hitboxVisible;
 
 
         public Player (XY p) { _p = p; }
@@ -21,20 +23,19 @@ namespace NupskouProject {
         }
 
 
-        
         public override void Update () {
-            var  keyboard = Keyboard.GetState ();
-            bool shift    = keyboard.IsKeyDown (Keys.LeftShift);
+            var keyboard = Keyboard.GetState ();
+            bool shift =
+            _hitboxVisible = keyboard.IsKeyDown (Keys.LeftShift);
 
             // if arrows pressed, move (shift - slowly)
-            int x =
-                (keyboard.IsKeyDown (Keys.Right) ? 1 : 0) -
-                (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
-            int y =
-                (keyboard.IsKeyDown (Keys.Down) ? 1 : 0) -
-                (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
+            int x = (keyboard.IsKeyDown (Keys.Right) ? 1 : 0) -
+            (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
+            int y = (keyboard.IsKeyDown (Keys.Down) ? 1 : 0) -
+            (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
 
-            _p+= new XY (x, y) * (shift ? 2 : 4);
+            _p += new XY (x, y) * (shift ? 2 : 4);
+            _p.Clamp (World.PlayerBox);
 
             // if z pressed, shoot (shift - 2nd mode)
             /* if (keyboard.IsKeyDown (Keys.Z)) {
@@ -44,8 +45,7 @@ namespace NupskouProject {
                 else {
                     Shoot ();
                 }*/
-            }
-
+        }
 
 
         public override void Render () {
@@ -60,6 +60,10 @@ namespace NupskouProject {
                 SpriteEffects.None,
                 0
             );
+            if (_hitboxVisible) {
+                The.SpriteBatch.DrawCircle (_p, Color.Maroon, 5);
+                The.SpriteBatch.DrawCircle (_p, Color.White,  3);
+            }
         }
 
     }

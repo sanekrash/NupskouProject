@@ -9,7 +9,8 @@ namespace NupskouProject {
 
     public class World {
 
-        public static Box Box         => new Box (0, 0, 600, 750);
+        public static Box Box         => new Box (0,  0,  600, 750);
+        public static Box PlayerBox   => new Box (20, 20, 580, 730);
         public static XY  BossPlace   => new XY (300, 250);
         public static XY  PlayerPlace => new XY (300, 500);
 
@@ -57,9 +58,9 @@ namespace NupskouProject {
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
-                  Spawn (new TornadoShotSpawner (Box.Center));
+                Spawn (new TornadoShotSpawner (Box.Center));
 //                Spawn (new DoubleSpiral (BossPlace));
- //               Spawn (new Recursion (BossPlace));
+                //               Spawn (new Recursion (BossPlace));
             }
         }
 
