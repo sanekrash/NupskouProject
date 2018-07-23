@@ -57,7 +57,7 @@ namespace NupskouProject.Raden.Bullets {
                 Color.White,
                 _rotation,
                 new Vector2 (256,   64),
-                new Vector2 (0.25f, 0.1f),
+                new Vector2 (0.25f, 0.15f),
                 SpriteEffects.None,
                 0
             );

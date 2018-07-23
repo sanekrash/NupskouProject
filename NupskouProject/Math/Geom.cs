@@ -18,13 +18,12 @@ namespace NupskouProject.MathUtils {
             return XY.SqrDistance (p, c.Center) <= c.Radius * c.Radius;
         }
 
-        public static bool CircleInBox(Circle c, Box b)
-        {
-            var r = c.Radius;
-            return (c.Center.X > b.Left + r)&&(c.Center.X < b.Right - r)&&(c.Center.Y > b.Top + r)&&(c.Center.Y < b.Bottom - r);
-        }
-        
 
+        public static bool CircleInBox (Circle c, Box b) {
+            float r = c.Radius;
+            return c.Center.X >= b.Left + r && c.Center.X <= b.Right - r
+                && c.Center.Y >= b.Top + r && c.Center.Y <= b.Bottom - r;
+        }
 
 
     }
