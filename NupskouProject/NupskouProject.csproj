@@ -70,6 +70,7 @@
     <Compile Include="Raden\Enemies\Ufo.cs" />
     <Compile Include="Raden\EntityList.cs" />
     <Compile Include="Raden\Skills\DigitSpawner.cs" />
+    <Compile Include="Raden\Skills\DoubleSpiral.cs" />
     <Compile Include="Raden\Skills\RocketSpawner.cs" />
     <Compile Include="Raden\Skills\Sunflower.cs" />
     <Compile Include="Raden\Skills\SunflowerSpawner.cs" />

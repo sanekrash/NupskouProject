@@ -8,11 +8,12 @@ using NupskouProject.Rashka;
 namespace NupskouProject {
 
     public class World {
-        
-        public static Box Box => new Box(0, 0, 600, 750);
+
+        public static Box Box       => new Box (0, 0, 600, 750);
+        public static XY  BossPlace => new XY (300, 300);
 
         public bool Paused;
-        public int Time = -1;
+        public int  Time = -1;
 
         private List <Entity> _entities = new List <Entity> ();
 //        private EntityList _entities = new EntityList();
@@ -26,11 +27,11 @@ namespace NupskouProject {
 
         public void Update () {
             if (Paused) return;
-            
+
             Time++;
 
             OnUpdate ();
-            
+
             for (int i = 0; i < _entities.Count; i++) {
                 var entity = _entities[i];
                 if (entity.Despawned) continue;
@@ -52,7 +53,8 @@ namespace NupskouProject {
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
-                  Spawn (new TornadoShotSpawner(Box.Center));
+                Spawn (new TornadoShotSpawner (Box.Center));
+//                Spawn (new DoubleSpiral (BossPlace));
             }
         }
 
