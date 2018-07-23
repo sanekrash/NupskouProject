@@ -24,8 +24,8 @@ namespace NupskouProject.Rashka {
 
         public override void Update () {
             int t = The.World.Time - _t0;
-            if (t % 60 == 0) {
-                t /= 60;
+            if (t % 90 == 0) {
+                t /= 90;
                 const float angle = Mathf.phiAngle / 15;
                 foreach (var v in Danmaku.Ring (new XY (t * angle), 15)) {
                     The.World.Spawn (new BounceArrow (_p, 3*v, Color.Blue));
