@@ -105,7 +105,7 @@ namespace NupskouProject.Raden.Enemies {
                 return;
             }
 
-            if (t % 10 == 0) {
+            if (t % 15 == 0) {
                 The.World.Spawn (new Bullet (_p, (The.PlayerXY - _p).WithLength (2), Color.Magenta));
                 The.World.Spawn (new Bullet (_p, new XY(0, 1.5f), Color.Yellow));
             }

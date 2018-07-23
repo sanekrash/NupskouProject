@@ -46,8 +46,8 @@ namespace NupskouProject {
 
 
         protected virtual void OnUpdate () {
-            if (Time == 0) {
-                Spawn (new UfoSpawner());
+            if (Time == 60) {
+                Spawn (new RocketSpawner(Box.Center));
             }
         }
 

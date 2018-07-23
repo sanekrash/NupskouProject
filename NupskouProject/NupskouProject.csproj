@@ -63,9 +63,11 @@
     <Compile Include="Math\Mathf.cs" />
     <Compile Include="Math\XY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raden\Bullets\ExplosiveRocket.cs" />
     <Compile Include="Raden\Bullets\Rocket.cs" />
     <Compile Include="Raden\Enemies\Ufo.cs" />
     <Compile Include="Raden\EntityList.cs" />
+    <Compile Include="Raden\Skills\RocketSpawner.cs" />
     <Compile Include="Raden\Skills\UfoSpawner.cs" />
     <Compile Include="Raden\Stages\TestStage.cs" />
     <Compile Include="Rashka\Spawner.cs" />
