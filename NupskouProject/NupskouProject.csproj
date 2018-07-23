@@ -75,8 +75,8 @@
     <Compile Include="Raden\Skills\SunflowerSpawner.cs" />
     <Compile Include="Raden\Skills\UfoSpawner.cs" />
     <Compile Include="Raden\Stages\TestStage.cs" />
+    <Compile Include="Rashka\Bullets\BounceBullet.cs" />
     <Compile Include="Rashka\Spawner.cs" />
-    <Compile Include="Rashka\TornadoShot.cs" />
     <Compile Include="Utils\ListExt.cs" />
     <Compile Include="Utils\RandomExtension.cs" />
     <Compile Include="Utils\SpriteBatchExtension.cs" />
@@ -87,6 +87,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rashka\Enemy" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MonoGame.Framework.DesktopGL.Core.3.7.0.7\build\MonoGame.Framework.DesktopGL.Core.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.Core.3.7.0.7\build\MonoGame.Framework.DesktopGL.Core.targets')" />

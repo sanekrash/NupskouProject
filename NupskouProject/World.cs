@@ -50,7 +50,8 @@ namespace NupskouProject {
 //                Spawn (new RocketSpawner(Box.Center));
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
-                Spawn (new DigitSpawner ());
+//                Spawn (new DigitSpawner ());
+                  Spawn (new Spawner(Box.Center));
             }
         }
 
