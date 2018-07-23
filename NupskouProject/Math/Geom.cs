@@ -1,4 +1,5 @@
-﻿using NupskouProject.Math;
+﻿using System;
+using NupskouProject.Math;
 
 
 namespace NupskouProject.MathUtils {
@@ -16,6 +17,15 @@ namespace NupskouProject.MathUtils {
             var p = c.Center.Clamped (b);
             return XY.SqrDistance (p, c.Center) <= c.Radius * c.Radius;
         }
+
+        public static bool CircleInBox(Circle c, Box b)
+        {
+            var r = c.Radius;
+            return (c.Center.X > b.Left + r)&&(c.Center.X < b.Right - r)&&(c.Center.Y > b.Top + r)&&(c.Center.Y < b.Bottom - r);
+        }
+        
+
+
 
     }
 
