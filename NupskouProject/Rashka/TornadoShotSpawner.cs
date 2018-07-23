@@ -27,7 +27,7 @@ namespace NupskouProject.Rashka {
             if (t % 90 == 0) {
                 t /= 90;
                 const float angle = Mathf.phiAngle / 15;
-                foreach (var v in Danmaku.Ring (new XY (t * angle), 15)) {
+                foreach (var v in Danmaku.Ring (new XY (t * angle), 21)) {
                     The.World.Spawn (new BounceArrow (_p, 3*v, Color.Blue));
                 }
             }
