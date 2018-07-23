@@ -28,6 +28,27 @@ namespace NupskouProject.Utils {
             );
         }
 
+        
+        public static void DrawPetal (
+            this SpriteBatch batch,
+            XY center,
+            float rotation,
+            Color color,
+            float size
+        ) {
+            batch.Draw (
+                The.Assets.PetalBullet,
+                center,
+                new Rectangle (0, 0, 128, 128),
+                color,
+                rotation,
+                new Vector2 (64, 64),
+                size / 32f,
+                SpriteEffects.None,
+                0
+            );
+        }
+
 
         public static void DrawRocket (
             this SpriteBatch batch,

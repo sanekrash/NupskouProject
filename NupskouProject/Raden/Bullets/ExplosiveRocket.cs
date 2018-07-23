@@ -57,7 +57,7 @@ namespace NupskouProject.Raden.Bullets {
 
             foreach (var v in Danmaku.Ring (XY.Up, ringSize)) {
 //            foreach (var w in Danmaku.Line (v, 0.5f, 1.0f, lineSize)) {
-                The.World.Spawn (new Bullet (_target, v, Color.Yellow));
+                The.World.Spawn (new PetalBullet (_target, v, Color.Yellow));
             }
         }
 
