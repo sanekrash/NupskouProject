@@ -1,8 +1,4 @@
-﻿using System;
-using NupskouProject.Math;
-
-
-namespace NupskouProject.MathUtils {
+﻿namespace NupskouProject.Math {
 
     public static class Geom {
 

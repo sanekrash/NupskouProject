@@ -48,7 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bullet.cs" />
+    <Compile Include="Bullets\Bullet.cs" />
+    <Compile Include="Bullets\PetalBullet.cs" />
     <Compile Include="Core\Assets.cs" />
     <Compile Include="Core\MainGame.cs" />
     <Compile Include="Core\Program.cs" />
@@ -61,7 +62,6 @@
     <Compile Include="Math\Geom.cs" />
     <Compile Include="Math\Mathf.cs" />
     <Compile Include="Math\XY.cs" />
-    <Compile Include="PetalBullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Raden\Bullets\Digit.cs" />
     <Compile Include="Raden\Bullets\ExplosiveRocket.cs" />

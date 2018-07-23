@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Rashka.Bullets;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Rashka {
 
     public class Spawner : Entity {
 

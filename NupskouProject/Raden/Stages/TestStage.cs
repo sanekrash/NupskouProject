@@ -1,7 +1,4 @@
-﻿using NupskouProject.Utils;
-
-
-namespace NupskouProject.Raden.Stages {
+﻿namespace NupskouProject.Raden.Stages {
 
     public class TestStage : World {
 

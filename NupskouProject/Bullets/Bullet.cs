@@ -1,12 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using NupskouProject.Core;
 using NupskouProject.Math;
-using NupskouProject.MathUtils;
 using NupskouProject.Utils;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Bullets {
 
     public class Bullet : Entity {
 

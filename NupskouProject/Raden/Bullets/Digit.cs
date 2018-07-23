@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using NupskouProject.Core;
 
 
-namespace NupskouProject.Raden.Skills {
+namespace NupskouProject.Raden.Bullets {
 
     public class Digit : Entity {
 

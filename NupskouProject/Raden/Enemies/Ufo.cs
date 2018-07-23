@@ -1,9 +1,7 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using NupskouProject.Bullets;
 using NupskouProject.Core;
 using NupskouProject.Math;
-using NupskouProject.MathUtils;
-using NupskouProject.Raden.Bullets;
 using NupskouProject.Utils;
 
 

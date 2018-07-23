@@ -1,11 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
-using NupskouProject.MathUtils;
 using NupskouProject.Utils;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Bullets {
 
     public class PetalBullet : Entity {
 
