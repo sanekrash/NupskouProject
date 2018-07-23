@@ -30,9 +30,9 @@ namespace NupskouProject {
 
             // if arrows pressed, move (shift - slowly)
             int x = (keyboard.IsKeyDown (Keys.Right) ? 1 : 0) -
-            (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
+                    (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
             int y = (keyboard.IsKeyDown (Keys.Down) ? 1 : 0) -
-            (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
+                    (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
 
             _p += new XY (x, y) * (shift ? 2 : 4);
             _p.Clamp (World.PlayerBox);
