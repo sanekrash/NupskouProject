@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NupskouProject.Math;
+using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
 
 
@@ -52,8 +53,9 @@ namespace NupskouProject {
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
-                Spawn (new TornadoShotSpawner (Box.Center));
+//                Spawn (new TornadoShotSpawner (Box.Center));
 //                Spawn (new DoubleSpiral (BossPlace));
+                Spawn (new Recursion (BossPlace));
             }
         }
 
