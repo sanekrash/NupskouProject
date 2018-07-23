@@ -29,7 +29,7 @@ namespace NupskouProject.Rashka
         {
             if ((The.World.Time - _t0) % 60 == 0)
             {
-                foreach (var v in Danmaku.Ring(XY.Up, 15 + The.Random.Next(5)))
+                foreach (var v in Danmaku.Ring(new XY(_t0), 15 + The.Random.Next(5)))
                 {
                     The.World.Spawn(new BounceArrow(_p, v, Color.Blue));
                 }
