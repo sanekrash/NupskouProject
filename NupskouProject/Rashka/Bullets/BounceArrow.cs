@@ -38,7 +38,7 @@ namespace NupskouProject.Rashka.Bullets {
             if (!Geom.CircleInBox (new Circle (_p, 6), World.Box)) {
                 Despawn ();
                 foreach (var v in Danmaku.Spray(-_v , Mathf.PI / 4 , 3) ) {
-                    The.World.Spawn (new Bullet(_p, v, _color)) ;
+                    The.World.Spawn (new Bullet(_p, v, Color.Red)) ;
                 }
 
             }
