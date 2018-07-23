@@ -12,6 +12,7 @@ namespace NupskouProject.Core {
         public Texture2D BigBullet;
         public Texture2D Rocket;
         public Texture2D Digits;
+        public Texture2D Raden;
 
 
         public void Load (ContentManager content) {
@@ -21,6 +22,7 @@ namespace NupskouProject.Core {
             BigBullet   = content.Load <Texture2D> ("big-bullet");
             Rocket      = content.Load <Texture2D> ("rocket");
             Digits      = content.Load <Texture2D> ("digits");
+            Raden       = content.Load <Texture2D> ("raden");
         }
 
     }
