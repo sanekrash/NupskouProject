@@ -15,6 +15,9 @@ namespace NupskouProject {
         private bool _hitboxVisible;
 
 
+        public XY Position => _p;
+
+
         public Player (XY p) { _p = p; }
 
 

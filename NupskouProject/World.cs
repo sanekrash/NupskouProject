@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
@@ -51,16 +52,16 @@ namespace NupskouProject {
 
         protected virtual void OnUpdate () {
             if (Time == 0) {
-                Spawn (new Player (PlayerPlace));
+                Spawn (The.Player = new Player (PlayerPlace));
             }
             if (Time == 60) {
-//                Spawn (new RocketSpawner(Box.Center));
+//                Spawn (new RocketSpawner(BossPlace));
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
-                Spawn (new TornadoShotSpawner (Box.Center));
+//                Spawn (new TornadoShotSpawner (Box.Center));
 //                Spawn (new DoubleSpiral (BossPlace));
-                //               Spawn (new Recursion (BossPlace));
+//                Spawn (new Recursion (BossPlace));
             }
         }
 
