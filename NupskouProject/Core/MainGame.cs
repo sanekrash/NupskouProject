@@ -22,6 +22,7 @@ namespace NupskouProject.Core {
 
         protected override void Initialize () {
             base.Initialize ();
+            IsMouseVisible = true;
         }
 
 
@@ -36,22 +37,21 @@ namespace NupskouProject.Core {
 
         protected override void Update (GameTime gameTime) {
             var kbd = Keyboard.GetState ();
-            
+
             if (kbd.IsKeyDown (Keys.Escape)) Exit ();
             if (kbd.IsKeyDown (Keys.P)) The.World.Paused = !The.World.Paused;
 
             The.World.Update ();
-            
+
             base.Update (gameTime);
         }
-
 
 
         protected override void Draw (GameTime gameTime) {
             GraphicsDevice.Clear (Color.Black);
 
             _spriteBatch.Begin ();
-            The.World.Render();
+            The.World.Render ();
             _spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
             _spriteBatch.End ();
 

@@ -106,8 +106,8 @@ namespace NupskouProject.Raden.Enemies {
             }
 
             if (t % 10 == 0) {
-                The.World.Spawn (new Rocket (_p, (new XY(300, 600) - _p).WithLength (2), Color.Magenta));
-                The.World.Spawn (new Rocket (_p, new XY(0, 1.5f), Color.Yellow));
+                The.World.Spawn (new Bullet (_p, (The.PlayerXY - _p).WithLength (2), Color.Magenta));
+                The.World.Spawn (new Bullet (_p, new XY(0, 1.5f), Color.Yellow));
             }
         }
 

@@ -31,7 +31,7 @@ namespace NupskouProject.Raden.Bullets {
 
         public override void Update () {
             _p = _p0 + (The.World.Time - _t0) * _v;
-            if (!Geom.CircleOverBox (new Circle (_p, 6), World.Box)) {
+            if (!Geom.CircleOverBox (new Circle (_p, 8), World.Box)) {
                 Despawn ();
             }
         }

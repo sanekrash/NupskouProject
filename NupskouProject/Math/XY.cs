@@ -31,8 +31,9 @@ namespace NupskouProject.Math {
         public static bool operator != (XY a, XY b) => a.X != b.X || a.Y != b.Y;
         public static bool operator == (XY a, XY b) => a.X == b.X && a.Y == b.Y;
 
-        
+
         public static implicit operator XY (Vector2 v) => new XY (v.X, v.Y);
+        public static implicit operator XY (Point v)   => new XY (v.X, v.Y);
         public static implicit operator Vector2 (XY v) => new Vector2 (v.X, v.Y);
 
 
