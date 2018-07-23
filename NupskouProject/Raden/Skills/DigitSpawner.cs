@@ -14,8 +14,6 @@ namespace NupskouProject.Raden.Skills {
 
         public override void Update () {
             int t        = The.World.Time - _t0;
-            var worldBox = World.Box;
-            var random   = The.Random;
             if (t % 10 == 0) {
                 SpawnDigits ();
             }
@@ -24,7 +22,7 @@ namespace NupskouProject.Raden.Skills {
 
         private static void SpawnDigits () {
             var ar = new bool[20];
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
                 ar[i] = true;
             }
             ar.Shuffle (The.Random);

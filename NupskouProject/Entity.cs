@@ -12,6 +12,7 @@
 
 
         public void Despawn () {
+            if (Despawned) return;
             Despawned = true;
             OnDespawn ();
         }
