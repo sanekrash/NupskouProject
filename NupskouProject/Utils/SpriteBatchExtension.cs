@@ -80,6 +80,39 @@ namespace NupskouProject.Utils {
                 0
             );
         }
+        
+        public static void DrawArrow (
+            this SpriteBatch batch,
+            XY center,
+            float rotation,
+            Color color,
+            float size
+        )
+        {
+            batch.Draw(
+                The.Assets.Arrow,
+                center,
+                new Rectangle (0, 0, 384, 128),
+                color,
+                rotation,
+                new Vector2 (64, 64),
+                size / 32f,
+                SpriteEffects.None,
+                0
+            );
+            batch.Draw(
+                The.Assets.Arrow,
+                center,
+                new Rectangle (0, 128, 384, 128),
+                Color.White,
+                rotation,
+                new Vector2 (64, 64),
+                size / 32f,
+                SpriteEffects.None,
+                0
+            );
+        }
+
 
 
         public static void DrawRay (
