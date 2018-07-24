@@ -21,14 +21,17 @@ namespace NupskouProject.Raden.Skills {
 
 
         public override void Update () {
-            var world = The.World;
-            int t     = world.Time - _t0;
-            if (t % 4 == 0) {
-                foreach (var v in Danmaku.Ring (new XY(0.005f * t), 2)) {
-                    world.Spawn (new PetalBullet (_p, v,  Color.Lime));
+            var world    = The.World;
+            int t        = world.Time - _t0;
+            int interval = The.Difficulty <= Difficulty.Easy ? 8 : 2;
+            if (t % interval == 0) {
+                foreach (var v in Danmaku.Ring (new XY (0.005f * t), 2)) {
+                    world.Spawn (new PetalBullet (_p, v, Color.Lime));
                 }
-                foreach (var v in Danmaku.Ring (new XY(-0.05f * t), 2)) {
-                    world.Spawn (new PetalBullet (_p, v,  Color.Cyan));
+            }
+            if (t % 4 == 0) {
+                foreach (var v in Danmaku.Ring (new XY (-0.2f / 4 * t), 2)) {
+                    world.Spawn (new PetalBullet (_p, v, Color.Cyan));
                 }
             }
         }
