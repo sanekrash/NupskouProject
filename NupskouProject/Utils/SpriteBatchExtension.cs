@@ -7,6 +7,7 @@ using NupskouProject.Math;
 
 namespace NupskouProject.Utils {
 
+    [Obsolete]
     public static class SpriteBatchExtension {
 
         public static void DrawCircle (

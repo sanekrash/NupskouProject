@@ -3,6 +3,7 @@ using NupskouProject.Bullets;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Bullets;
+using NupskouProject.Utils;
 
 
 namespace NupskouProject.Raden.Skills {
@@ -21,11 +22,12 @@ namespace NupskouProject.Raden.Skills {
             var world = The.World;
             int t     = world.Time - _t0;
             if (t == 30) {
-                foreach (var v in Danmaku.Ring (new XY(0, 2), 12)) {
-                    world.Spawn (new SunflowerRay (_p, v));
+                var v = new XY (The.Random.Angle ());
+                foreach (var w in Danmaku.Ring (2 * v, 12)) {
+                    world.Spawn (new SunflowerRay (_p, w));
                 }
-                foreach (var v in Danmaku.Ring (new XY(0, 2.5f).Rotated (Mathf.PI / 12), 12)) {
-                    world.Spawn (new SunflowerRay (_p, v));
+                foreach (var w in Danmaku.Ring (2.5f * v.Rotated (Mathf.PI / 12), 12)) {
+                    world.Spawn (new SunflowerRay (_p, w));
                 }
             }
             if (t >= 180) {
