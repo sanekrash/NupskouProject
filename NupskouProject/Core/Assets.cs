@@ -14,6 +14,7 @@ namespace NupskouProject.Core {
         public Texture2D Digits;
         public Texture2D Raden;
         public Texture2D Square;
+        public Texture2D Arrow;
 
 
         public void Load (ContentManager content) {

@@ -79,6 +79,7 @@
     <Compile Include="Raden\Skills\SunflowerSpawner.cs" />
     <Compile Include="Raden\Skills\UfoSpawner.cs" />
     <Compile Include="Raden\Stages\TestStage.cs" />
+    <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
     <Compile Include="Rashka\Bullets\BounceBullet.cs" />
     <Compile Include="Rashka\Spawner.cs" />
