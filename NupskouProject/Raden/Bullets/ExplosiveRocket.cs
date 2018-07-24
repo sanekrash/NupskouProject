@@ -2,6 +2,7 @@
 using NupskouProject.Bullets;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.Raden.Skills;
 using NupskouProject.Utils;
 
 
@@ -54,12 +55,12 @@ namespace NupskouProject.Raden.Bullets {
             // 2 12 3  72
             // 2 16 3  96
 
-            int ringSize = 24; //The.Difficulty == Difficulty.Hard ? 12 : 16;
-            int lineSize = 1;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
+            int ringSize = 20; //The.Difficulty == Difficulty.Hard ? 12 : 16;
+            int lineSize = 2;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
 
-            foreach (var v in Danmaku.Ring (XY.Up, ringSize)) {
-//            foreach (var w in Danmaku.Line (v, 0.5f, 1.0f, lineSize)) {
-                The.World.Spawn (new PetalBullet (_target, v, Color.Yellow));
+            foreach (var v in Danmaku.Ring (XY.Up, ringSize))
+            foreach (var w in Danmaku.Line (v, 0.75f, 1.0f, lineSize)) {
+                The.World.Spawn (new PetalBullet (_target, w, Color.Yellow));
             }
         }
 

@@ -49,7 +49,7 @@ namespace NupskouProject.Core {
 
 
         protected override void Draw (GameTime gameTime) {
-            GraphicsDevice.Clear (Color.Black);
+            GraphicsDevice.Clear (new Color(8, 12, 16));
 
             The.Renderer.Clear ();
             The.World.Render ();

@@ -46,7 +46,7 @@ namespace NupskouProject {
 //            }
 //            _entities.ClearDespawned ();
 
-//            Console.WriteLine (_entities.Count);
+            Console.WriteLine (_entities.Count);
         }
 
 
