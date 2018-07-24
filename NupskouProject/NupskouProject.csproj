@@ -83,6 +83,7 @@
     <Compile Include="Rashka\Bullets\BounceBullet.cs" />
     <Compile Include="Rashka\Spawner.cs" />
     <Compile Include="Rashka\TornadoShotSpawner.cs" />
+    <Compile Include="Renderer.cs" />
     <Compile Include="Utils\ListExt.cs" />
     <Compile Include="Utils\RandomExtension.cs" />
     <Compile Include="Utils\SpriteBatchExtension.cs" />
