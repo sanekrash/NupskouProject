@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NupskouProject.Math;
 
 
 namespace NupskouProject {
@@ -56,7 +57,13 @@ namespace NupskouProject {
         private Vector2   _origin;
         private Vector2   _scale;
 
-        public Sprite()
+        public Sprite(
+            this SpriteBatch batch,
+            XY center,
+            float rotation,
+            Color color,
+            float size
+            )
         {
             
         }
