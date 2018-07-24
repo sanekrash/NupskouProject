@@ -11,7 +11,7 @@ namespace NupskouProject.Core {
         public static Assets      Assets     = new Assets ();
         public static World       World      = new World ();
         public static Random      Random     = new Random ();
-        public static Difficulty  Difficulty = Difficulty.Normal;
+        public static Difficulty  Difficulty = Difficulty.Lunatic;
         public static SpriteBatch SpriteBatch;
         public static Player Player;
 

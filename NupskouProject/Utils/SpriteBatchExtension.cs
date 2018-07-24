@@ -82,6 +82,28 @@ namespace NupskouProject.Utils {
         }
 
 
+        public static void DrawRay (
+            this SpriteBatch batch,
+            XY origin,
+            float rotation,
+            Color color,
+            float width,
+            float length
+        ) {
+            batch.Draw (
+                The.Assets.Square,
+                origin,
+                new Rectangle (0, 0, 64, 64),
+                color,
+                rotation,
+                new Vector2 (0, 32),
+                new Vector2 (length, width) / 64, 
+                SpriteEffects.None,
+                0
+            );
+        }
+
+
         [Obsolete]
         public static void DrawRoundBullet (
             this SpriteBatch batch,

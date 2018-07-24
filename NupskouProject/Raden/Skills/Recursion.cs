@@ -58,16 +58,16 @@ namespace NupskouProject.Raden.Skills {
                     break;
                 default: return;
             }
-            int bullets = 8;
+            int bullets = 11;
             switch (The.Difficulty) {
                 case Difficulty.Easy:
                     bullets = 5;
                     break;
                 case Difficulty.Normal:
-                    bullets = 6;
+                    bullets = 7;
                     break;
                 case Difficulty.Hard:
-                    bullets = 7;
+                    bullets = 9;
                     break;
             }
             

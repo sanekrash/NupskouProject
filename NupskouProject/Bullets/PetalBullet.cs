@@ -18,9 +18,9 @@ namespace NupskouProject.Bullets {
 
 
         public PetalBullet (XY p0, XY v, Color color) {
-            _p     = _p0 = p0;
-            _v     = v;
-            _color = color;
+            _p        = _p0 = p0;
+            _v        = v;
+            _color    = color;
             _rotation = _v.Angle;
         }
 

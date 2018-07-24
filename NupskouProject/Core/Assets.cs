@@ -13,6 +13,7 @@ namespace NupskouProject.Core {
         public Texture2D Rocket;
         public Texture2D Digits;
         public Texture2D Raden;
+        public Texture2D Square;
 
 
         public void Load (ContentManager content) {
@@ -23,6 +24,7 @@ namespace NupskouProject.Core {
             Rocket      = content.Load <Texture2D> ("rocket");
             Digits      = content.Load <Texture2D> ("digits");
             Raden       = content.Load <Texture2D> ("raden");
+            Square      = content.Load <Texture2D> ("square");
         }
 
     }

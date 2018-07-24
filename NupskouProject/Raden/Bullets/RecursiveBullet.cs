@@ -55,6 +55,9 @@ namespace NupskouProject.Raden.Bullets {
         public override void Render () {
             The.SpriteBatch.DrawPetal (_p, _rotation, _color,      4);
             The.SpriteBatch.DrawPetal (_p, _rotation, Color.White, 2.5f);
+//            if (_rank == 1) {
+//                The.SpriteBatch.DrawRay (_p, _rotation, _color, 3, 1000);
+//            }
         }
 
 
