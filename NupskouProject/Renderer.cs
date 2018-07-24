@@ -56,23 +56,27 @@ namespace NupskouProject {
         private float     _rotation;
         private Vector2   _origin;
         private Vector2   _scale;
-        private float     _size;
-        private XY        _center;
         
         
 
-        public Sprite(
-            XY center,
-            float rotation,
-            Color color,
-            float size
+        public void Sprite
+            (
+            Texture2D texture2D,
+            Vector2   position,
+            Rectangle sourceRectangle,
+            Color     color,
+            float     rotation,
+            Vector2   origin,
+            Vector2   scale
             )
         {
-            _rotation = rotation;
-            _size = size;
+            _texture = texture2D;
+            _position = position;
+            _sourceRectangle = sourceRectangle;
             _color = color;
-            _center = center;
-
+            _rotation = rotation;
+            _origin = origin;
+            _scale = scale;
         }
 
         public void Render (SpriteBatch spriteBatch) {
