@@ -64,6 +64,7 @@
     <Compile Include="Math\XY.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raden\Bullets\GsomRay.cs" />
     <Compile Include="Raden\Bullets\RecursiveBullet.cs" />
     <Compile Include="Raden\Bullets\Digit.cs" />
     <Compile Include="Raden\Bullets\ExplosiveRocket.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Raden\Bullets\SunflowerRay.cs" />
     <Compile Include="Raden\Enemies\Ufo.cs" />
     <Compile Include="Raden\EntityList.cs" />
+    <Compile Include="Raden\Skills\GsomRaycaster.cs" />
     <Compile Include="Raden\Skills\Recursion.cs" />
     <Compile Include="Raden\Skills\DigitSpawner.cs" />
     <Compile Include="Raden\Skills\DoubleSpiral.cs" />
