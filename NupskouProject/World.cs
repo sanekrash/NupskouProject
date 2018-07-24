@@ -55,7 +55,7 @@ namespace NupskouProject {
             if (Time == 60) {
 //                Spawn (new RocketSpawner(BossPlace));
 //                Spawn (new UfoSpawner ());
-                Spawn (new SunflowerSpawner ());
+//                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
 //                Spawn (new TornadoShotSpawner (BossPlace));
 //                Spawn (new DoubleSpiral (BossPlace));

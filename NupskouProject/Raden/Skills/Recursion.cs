@@ -75,7 +75,7 @@ namespace NupskouProject.Raden.Skills {
                 default: throw new ArgumentOutOfRangeException ();
             }
             
-            foreach (var w in Danmaku.Ring (v, bullets)) {
+            foreach (var w in Danmaku.Ring (1.5f * v, bullets)) {
                 The.World.Spawn (new RecursiveBullet (_p, w, color, 5));
             }
         }

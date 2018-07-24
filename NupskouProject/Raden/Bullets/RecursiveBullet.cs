@@ -35,7 +35,7 @@ namespace NupskouProject.Raden.Bullets {
         public override void Update () {
             int t = The.World.Time - _t0;
             _p = _p0 + t * _v;
-            if (_rank > 1 && t == 40) {
+            if (_rank > 1 && t == 30) {
                 Split ();
             }
             else if (_rank == 1 && !Geom.CircleOverBox (new Circle (_p, 6), World.Box)) {
