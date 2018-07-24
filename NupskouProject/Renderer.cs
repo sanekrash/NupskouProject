@@ -56,6 +56,10 @@ namespace NupskouProject {
         private Vector2   _origin;
         private Vector2   _scale;
 
+        public Sprite()
+        {
+            
+        }
 
         public void Render (SpriteBatch spriteBatch) {
             spriteBatch.Draw (
