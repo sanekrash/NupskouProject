@@ -61,6 +61,34 @@ namespace NupskouProject {
                 )
             );
         }
+        
+        public void DrawArrow (XY center,float rotation,Color color, float size)
+        {
+            _sprites.Add (
+                new Sprite (
+                    The.Assets.Arrow,
+                    center,
+                    new Rectangle (0, 0, 384, 128),
+                    color,
+                    rotation,
+                    new Vector2 (128, 64),
+                    new Vector2 (size / 40f)
+                )
+            );
+            _sprites.Add (
+                new Sprite (
+                    The.Assets.Arrow,
+                    center,
+                    new Rectangle (0, 128, 384, 128),
+                    Color.White,
+                    rotation,
+                    new Vector2 (128, 64),
+                    new Vector2 (size / 40f)
+                )
+            );
+        }
+
+
 
 
         public void Render (SpriteBatch spriteBatch) {
