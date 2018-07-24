@@ -13,7 +13,7 @@ namespace NupskouProject.Core {
 
         public MainGame () {
             _graphicsDevice = new GraphicsDeviceManager (this) {
-                PreferredBackBufferWidth  = 1050,
+                PreferredBackBufferWidth  = 600,//1050,
                 PreferredBackBufferHeight = 750,
                 PreferMultiSampling       = true,
             };

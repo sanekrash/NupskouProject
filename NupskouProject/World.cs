@@ -59,8 +59,8 @@ namespace NupskouProject {
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
-                 Spawn (new TornadoShotSpawner (BossPlace));
-//                Spawn (new DoubleSpiral (BossPlace));
+//                 Spawn (new TornadoShotSpawner (BossPlace));
+                Spawn (new DoubleSpiral (BossPlace));
 //                Spawn (new Recursion (BossPlace));
             }
         }
