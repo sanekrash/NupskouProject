@@ -46,16 +46,16 @@ namespace NupskouProject {
 //            }
 //            _entities.ClearDespawned ();
 
-            Console.WriteLine (_entities.Count);
+//            Console.WriteLine (_entities.Count);
         }
 
 
         protected virtual void OnUpdate () {
             if (Time == 0) Spawn (The.Player = new Player (PlayerPlace));
             if (Time == 60) {
-//                Spawn (new RocketSpawner(BossPlace));
+                Spawn (new RocketSpawner(BossPlace));
 //                Spawn (new UfoSpawner ());
-                Spawn (new SunflowerSpawner ());
+//                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());
 //                Spawn (new TornadoShotSpawner (BossPlace));
 //                Spawn (new DoubleSpiral (BossPlace));

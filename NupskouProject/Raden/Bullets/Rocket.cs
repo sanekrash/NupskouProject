@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Utils;
@@ -11,6 +12,7 @@ namespace NupskouProject.Raden.Bullets {
         private readonly XY    _p0;
         private readonly XY    _v;
         private readonly Color _color;
+        private readonly Color _smokeColor;
 
         private int _t0;
         private XY  _p;
@@ -19,7 +21,9 @@ namespace NupskouProject.Raden.Bullets {
         public Rocket (XY p0, XY v, Color color) {
             _p     = _p0 = p0;
             _v     = v;
-            _color = color;
+            _color = _smokeColor = color;
+
+            _smokeColor.A /= 2;
         }
 
 
@@ -29,6 +33,7 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Update () {
+            The.World.Spawn (new Smoke (_p, _smokeColor, The.Random.Float (5, 10)));
             _p = _p0 + (The.World.Time - _t0) * _v;
             if (!Geom.CircleOverBox (new Circle (_p, 8), World.Box)) {
                 Despawn ();
