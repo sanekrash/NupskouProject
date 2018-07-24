@@ -59,7 +59,7 @@ namespace NupskouProject.Raden.Bullets {
             int lineSize = 2;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
 
             foreach (var v in Danmaku.Ring (XY.Up, ringSize))
-            foreach (var w in Danmaku.Line (v, 0.75f, 1.0f, lineSize)) {
+            foreach (var w in Danmaku.Line (v, 1f, 1.5f, lineSize)) {
                 The.World.Spawn (new PetalBullet (_target, w, Color.Yellow));
             }
         }
