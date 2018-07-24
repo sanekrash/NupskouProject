@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 
@@ -38,7 +39,7 @@ namespace NupskouProject {
 
         public void Render (SpriteBatch spriteBatch) {
             foreach (var sprite in _sprites) {
-                sprite.Render ();
+                sprite.Render (spriteBatch);
             }
         }
 
@@ -47,7 +48,28 @@ namespace NupskouProject {
 
     public class Sprite {
 
-        public void Render () {}
+        private Texture2D _texture;
+        private Vector2   _position;
+        private Rectangle _sourceRectangle;
+        private Color     _color;
+        private float     _rotation;
+        private Vector2   _origin;
+        private Vector2   _scale;
+
+
+        public void Render (SpriteBatch spriteBatch) {
+            spriteBatch.Draw (
+                _texture,
+                _position,
+                _sourceRectangle,
+                _color,
+                _rotation,
+                _origin,
+                _scale,
+                SpriteEffects.None,
+                0
+            );
+        }
 
     }
 
