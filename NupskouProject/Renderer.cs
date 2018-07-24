@@ -58,7 +58,6 @@ namespace NupskouProject {
         private Vector2   _scale;
 
         public Sprite(
-            this SpriteBatch batch,
             XY center,
             float rotation,
             Color color,
