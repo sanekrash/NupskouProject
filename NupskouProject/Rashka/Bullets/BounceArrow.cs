@@ -49,7 +49,7 @@ namespace NupskouProject.Rashka.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.DrawArrow (_p,_rotation , _color,      3);
+//            The.Renderer.DrawArrow (_p,_rotation , _color,      3);
         }
 
     }

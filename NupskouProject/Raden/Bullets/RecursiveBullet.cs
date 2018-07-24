@@ -46,18 +46,19 @@ namespace NupskouProject.Raden.Bullets {
 
         private void Split () {
             Despawn ();
-            foreach (var v in Danmaku.Spray (_v, 2 * Mathf.PI - Mathf.phiAngle, _rank)) {
+            foreach (var v in Danmaku.Spray (_v, /*2 * */Mathf.PI/* - Mathf.phiAngle*/, _rank)) {
                 The.World.Spawn (new RecursiveBullet (_p, v, _color, _rank - 1));
             }
         }
 
 
         public override void Render () {
-            The.SpriteBatch.DrawPetal (_p, _rotation, _color,      4);
-            The.SpriteBatch.DrawPetal (_p, _rotation, Color.White, 2.5f);
-//            if (_rank == 1) {
-//                The.SpriteBatch.DrawRay (_p, _rotation, _color, 3, 1000);
-//            }
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, _color,      4);
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, Color.White, 2.5f);
+            return;
+            if (_rank == 1) {
+                The.Renderer.BulletsBack.DrawRay (_p, _rotation, _color, 3, 1000);
+            }
         }
 
 

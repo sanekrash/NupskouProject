@@ -37,7 +37,7 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.DrawRocket (_p, _v.Angle, _color, 6);
+            The.Renderer.Bullets.DrawRocket (_p, _v.Angle, _color, 6);
         }
 
     }

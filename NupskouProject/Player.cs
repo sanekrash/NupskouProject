@@ -33,9 +33,9 @@ namespace NupskouProject {
 
             // if arrows pressed, move (shift - slowly)
             int x = (keyboard.IsKeyDown (Keys.Right) ? 1 : 0) -
-                    (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
+            (keyboard.IsKeyDown (Keys.Left) ? 1 : 0);
             int y = (keyboard.IsKeyDown (Keys.Down) ? 1 : 0) -
-                    (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
+            (keyboard.IsKeyDown (Keys.Up) ? 1 : 0);
 
             _p += new XY (x, y) * (shift ? 2 : 4);
             _p.Clamp (World.PlayerBox);
@@ -52,20 +52,20 @@ namespace NupskouProject {
 
 
         public override void Render () {
-            The.SpriteBatch.Draw (
-                The.Assets.Raden,
-                _p,
-                null,
-                Color.White,
-                0,
-                new Vector2 (64, 128),
-                0.3f,
-                SpriteEffects.None,
-                0
+            The.Renderer.Player.Draw (
+                new Sprite (
+                    The.Assets.Raden,
+                    _p,
+                    new Rectangle (0, 0, 128, 256),
+                    Color.White,
+                    0,
+                    new Vector2 (64, 128),
+                    new Vector2 (0.3f)
+                )
             );
             if (_hitboxVisible) {
-                The.SpriteBatch.DrawCircle (_p, Color.Maroon, 5);
-                The.SpriteBatch.DrawCircle (_p, Color.White,  3);
+                The.Renderer.Hitbox.DrawCircle (_p, Color.Maroon, 5);
+                The.Renderer.Hitbox.DrawCircle (_p, Color.White,  3);
             }
         }
 

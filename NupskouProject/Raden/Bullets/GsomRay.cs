@@ -37,12 +37,12 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Render () {
-            var batch = The.SpriteBatch;
+            var renderer = The.Renderer;
             
-            batch.DrawCircle (_p, Color.Lime, _w);
-            batch.DrawRay (_p, _rotation, Color.Lime, _w * 2, 1000);
-            batch.DrawCircle (_p, Color.White, _w / 2);
-            batch.DrawRay (_p, _rotation, Color.White, _w, 1000);
+            renderer.Bullets.DrawCircle (_p, Color.Lime, _w);
+            renderer.Bullets.DrawRay (_p, _rotation, Color.Lime, _w * 2, 1000);
+            renderer.BulletsFront.DrawCircle (_p, Color.White, _w / 2);
+            renderer.BulletsFront.DrawRay (_p, _rotation, Color.White, _w, 1000);
         }
 
     }

@@ -34,16 +34,16 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.Draw (
-                The.Assets.Digits,
-                new Vector2(_x * 600f / 32, _y * 750f / 20),
-                new Rectangle(_one ? 128 : 0, 0, 128, 256),
-                Color.White,
-                0,
-                Vector2.Zero, 
-                75f / 512,
-                SpriteEffects.None,
-                0
+            The.Renderer.Bullets.Draw (
+                new Sprite (
+                    The.Assets.Digits,
+                    new Vector2 (_x * 600f / 32, _y * 750f / 20),
+                    new Rectangle (_one ? 128 : 0, 0, 128, 256),
+                    Color.White,
+                    0,
+                    Vector2.Zero,
+                    new Vector2 (75f / 512)
+                )
             );
         }
 

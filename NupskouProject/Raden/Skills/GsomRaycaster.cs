@@ -26,11 +26,9 @@ namespace NupskouProject.Raden.Skills {
         public override void Update () {
             var   world = The.World;
             int   t     = world.Time - _t0;
-//            if (t % 5 != 0) return;
-//            t /= 5;
-            float angle = t * Mathf.PI / 32;
-            world.Spawn (new GsomRay (_p + 30 * new XY(angle).Rotated90CW (), angle));
-            world.Spawn (new GsomRay (_p - 30 * new XY(angle).Rotated90CW (), angle));
+            float angle = t * Mathf.PI / 30;
+            world.Spawn (new GsomRay (_p + 15 * new XY(angle).Rotated90CW (), angle));
+            world.Spawn (new GsomRay (_p - 15 * new XY(angle).Rotated90CW (), angle));
         }
 
     }

@@ -37,8 +37,8 @@ namespace NupskouProject.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.DrawCircle (_p, _color,      6);
-            The.SpriteBatch.DrawCircle (_p, Color.White, 4);
+            The.Renderer.Bullets.DrawCircle (_p, _color,      6);
+            The.Renderer.Bullets.DrawCircle (_p, Color.White, 4);
         }
 
     }

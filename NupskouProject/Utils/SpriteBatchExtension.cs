@@ -16,7 +16,7 @@ namespace NupskouProject.Utils {
             float radius
         ) {
             batch.Draw (
-                The.Assets.RoundBullet,
+                The.Assets.Circle,
                 center,
                 new Rectangle (0, 0, 128, 128),
                 color,
@@ -146,7 +146,7 @@ namespace NupskouProject.Utils {
             float drawOrder
         ) {
             batch.Draw (
-                The.Assets.RoundBullet,
+                The.Assets.Circle,
                 center,
                 new Rectangle (0, 0, 256, 256),
                 color,

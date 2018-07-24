@@ -39,8 +39,8 @@ namespace NupskouProject.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.DrawPetal (_p, _rotation, _color,      4);
-            The.SpriteBatch.DrawPetal (_p, _rotation, Color.White, 2.5f);
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, _color,      4);
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, Color.White, 2.5f);
         }
 
     }

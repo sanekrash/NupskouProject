@@ -111,8 +111,8 @@ namespace NupskouProject.Raden.Enemies {
 
 
         public override void Render () {
-            The.SpriteBatch.DrawCircle (_p, _color,      20);
-            The.SpriteBatch.DrawCircle (_p, Color.White, 16);
+            The.Renderer.BulletsFront.DrawCircle (_p, _color,      20);
+            The.Renderer.BulletsFront.DrawCircle (_p, Color.White, 16);
         }
 
     }

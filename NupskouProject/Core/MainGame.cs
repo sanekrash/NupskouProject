@@ -27,7 +27,8 @@ namespace NupskouProject.Core {
 
 
         protected override void LoadContent () {
-            The.SpriteBatch = _spriteBatch = new SpriteBatch (GraphicsDevice);
+            // The.SpriteBatch =
+            _spriteBatch = new SpriteBatch (GraphicsDevice);
             The.Assets.Load (Content);
         }
 
@@ -38,7 +39,7 @@ namespace NupskouProject.Core {
         protected override void Update (GameTime gameTime) {
             var kbd = Keyboard.GetState ();
 
-            if (kbd.IsKeyDown (Keys.Escape)) Exit ();
+//            if (kbd.IsKeyDown (Keys.Escape)) Exit ();
             if (kbd.IsKeyDown (Keys.P)) The.World.Paused = !The.World.Paused;
 
             The.World.Update ();
@@ -50,10 +51,12 @@ namespace NupskouProject.Core {
         protected override void Draw (GameTime gameTime) {
             GraphicsDevice.Clear (Color.Black);
 
-            _spriteBatch.Begin ();
+            The.Renderer.Clear ();
             The.World.Render ();
-            _spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
-            _spriteBatch.End ();
+            The.Renderer.Render (_spriteBatch);
+//            _spriteBatch.Begin ();
+//            _spriteBatch.Draw (The.Assets.SidePanel, new Rectangle (600, 0, 450, 750), Color.White);
+//            _spriteBatch.End ();
 
             base.Draw (gameTime);
         }

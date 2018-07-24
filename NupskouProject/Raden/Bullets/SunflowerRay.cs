@@ -37,27 +37,27 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Render () {
-            The.SpriteBatch.Draw (
-                The.Assets.BigBullet,
-                _p,
-                new Rectangle (0, 0, 512, 128),
-                Color.Yellow,
-                _rotation,
-                new Vector2 (256, 64),
-                0.25f,
-                SpriteEffects.None,
-                0
+            The.Renderer.Bullets.Draw (
+                new Sprite (
+                    The.Assets.BigBullet,
+                    _p,
+                    new Rectangle (0, 0, 512, 128),
+                    Color.Yellow,
+                    _rotation,
+                    new Vector2 (256, 64),
+                    new Vector2 (0.25f)
+                )
             );
-            The.SpriteBatch.Draw (
-                The.Assets.BigBullet,
-                _p,
-                new Rectangle (0, 0, 512, 128),
-                Color.White,
-                _rotation,
-                new Vector2 (256,   64),
-                new Vector2 (0.25f, 0.15f),
-                SpriteEffects.None,
-                0
+            The.Renderer.Bullets.Draw (
+                new Sprite (
+                    The.Assets.BigBullet,
+                    _p,
+                    new Rectangle (0, 0, 512, 128),
+                    Color.White,
+                    _rotation,
+                    new Vector2 (256,   64),
+                    new Vector2 (0.25f, 0.15f)
+                )
             );
         }
 
