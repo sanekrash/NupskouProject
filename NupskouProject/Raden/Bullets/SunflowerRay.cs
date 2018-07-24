@@ -37,7 +37,7 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Render () {
-            The.Renderer.Bullets.Draw (
+            The.Renderer.BulletsBack.Draw (
                 new Sprite (
                     The.Assets.BigBullet,
                     _p,
@@ -48,7 +48,7 @@ namespace NupskouProject.Raden.Bullets {
                     new Vector2 (0.25f)
                 )
             );
-            The.Renderer.Bullets.Draw (
+            The.Renderer.BulletsBack.Draw (
                 new Sprite (
                     The.Assets.BigBullet,
                     _p,
