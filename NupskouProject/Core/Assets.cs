@@ -26,6 +26,7 @@ namespace NupskouProject.Core {
             Digits      = content.Load <Texture2D> ("digits");
             Raden       = content.Load <Texture2D> ("raden");
             Square      = content.Load <Texture2D> ("square");
+            Arrow       = content.Load<Texture2D>("arrow");
         }
 
     }
