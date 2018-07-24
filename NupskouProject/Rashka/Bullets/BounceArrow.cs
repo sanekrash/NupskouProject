@@ -40,8 +40,8 @@ namespace NupskouProject.Rashka.Bullets {
             _p = _p0 + (The.World.Time - _t0) * _v;
             if (!Geom.CircleInBox (new Circle (_p, 6), World.Box)) {
                 Despawn ();
-                foreach (var v in Danmaku.Spray(-_v , Mathf.PI / 2 , 4) ) {
-                    The.World.Spawn (new Arrow(_p, v/3, Color.Red)) ;
+                foreach (var v in Danmaku.Spray(-_v , Mathf.PI / 2 , 3) ) {
+                    The.World.Spawn (new Arrow(_p, v/4, Color.Red)) ;
                 }
 
             }
