@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using NupskouProject.Core;
+using NupskouProject.Rendering;
 
 
 namespace NupskouProject.Raden.Bullets {

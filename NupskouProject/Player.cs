@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.Rendering;
 using NupskouProject.Utils;
 
 

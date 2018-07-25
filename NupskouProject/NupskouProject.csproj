@@ -48,8 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bullets\Bullet.cs" />
-    <Compile Include="Bullets\PetalBullet.cs" />
+    <Compile Include="Entities\Bullet.cs" />
+    <Compile Include="Entities\PetalBullet.cs" />
     <Compile Include="Core\Assets.cs" />
     <Compile Include="Core\MainGame.cs" />
     <Compile Include="Core\Program.cs" />

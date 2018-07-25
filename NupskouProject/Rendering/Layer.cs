@@ -5,7 +5,7 @@ using NupskouProject.Core;
 using NupskouProject.Math;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Rendering {
 
     public partial class Layer {
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using NupskouProject.Bullets;
 using NupskouProject.Core;
+using NupskouProject.Entities;
 using NupskouProject.Math;
 using NupskouProject.Raden.Bullets;
 using NupskouProject.Utils;

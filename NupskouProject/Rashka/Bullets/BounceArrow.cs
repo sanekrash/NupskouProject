@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using NupskouProject.Bullets;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Utils;

@@ -1,25 +1,26 @@
 ﻿using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
-using NupskouProject.Utils;
 
 
-namespace NupskouProject.Bullets {
+namespace NupskouProject.Entities {
 
-    public class Bullet : Entity {
+    public class PetalBullet : Entity {
 
         private readonly XY    _p0;
         private readonly XY    _v;
+        private readonly float _rotation;
         private readonly Color _color;
 
         private int _t0;
         private XY  _p;
 
 
-        public Bullet (XY p0, XY v, Color color) {
-            _p     = _p0 = p0;
-            _v     = v;
-            _color = color;
+        public PetalBullet (XY p0, XY v, Color color) {
+            _p        = _p0 = p0;
+            _v        = v;
+            _color    = color;
+            _rotation = _v.Angle;
         }
 
 
@@ -37,8 +38,8 @@ namespace NupskouProject.Bullets {
 
 
         public override void Render () {
-            The.Renderer.Bullets.DrawCircle (_p, _color,      6);
-            The.Renderer.Bullets.DrawCircle (_p, Color.White, 4);
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, _color,      4);
+            The.Renderer.Bullets.DrawPetal (_p, _rotation, Color.White, 2.5f);
         }
 
     }

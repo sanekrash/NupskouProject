@@ -4,7 +4,7 @@ using NupskouProject.Core;
 using NupskouProject.Math;
 
 
-namespace NupskouProject {
+namespace NupskouProject.Rendering {
 
     public class Sprite {
 
