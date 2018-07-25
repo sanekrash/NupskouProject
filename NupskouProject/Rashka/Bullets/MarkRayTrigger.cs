@@ -31,7 +31,7 @@ namespace NupskouProject.Rashka.Bullets {
                 Despawn ();
                 The.World.Spawn (new RayCast (_p, _rotation, _wRay, _color));
             }
-            _w = _wRay * t / duration;
+           // _w = _wRay * t / duration;
         }
 
 
