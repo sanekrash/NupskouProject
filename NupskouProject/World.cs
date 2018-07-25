@@ -4,6 +4,7 @@ using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
+using NupskouProject.Stages;
 
 
 namespace NupskouProject {
@@ -61,7 +62,8 @@ namespace NupskouProject {
 //                Spawn (new DoubleSpiral (BossPlace));
 //                Spawn (new Recursion (BossPlace));
 //                Spawn (new GsomRaycaster (BossPlace));
-                  Spawn (new ShootTheLalkaSpawner(BossPlace));
+//                  Spawn (new ShootTheLalkaSpawner(BossPlace));
+                  Spawn (new Stage1() );
             }
         }
 
