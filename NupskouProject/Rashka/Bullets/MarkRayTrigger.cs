@@ -29,7 +29,7 @@ namespace NupskouProject.Rashka.Bullets {
             const int duration = 120;
             if (t >= duration) {
                 Despawn ();
-                The.World.Spawn (new RayCast (_p, _rotation, _wRay, Color.Purple));
+                The.World.Spawn (new RayCast (_p, _rotation, _wRay, _color));
             }
             _w = _wRay * t / duration;
         }
