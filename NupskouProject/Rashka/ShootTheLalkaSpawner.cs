@@ -25,8 +25,8 @@ namespace NupskouProject.Rashka
             var   world = The.World;
             int   t     = world.Time - _t0;
             if (t % 60 == 0){
-            world.Spawn (new RayCast (new XY(The.Player.Position.X,0), Mathf.PI/2, 3, Color.Purple));
-            world.Spawn (new RayCast (new XY(0,The.Player.Position.Y), 0, 3 ,Color.Purple));
+            world.Spawn (new MarkRay (new XY(The.Player.Position.X,0), Mathf.PI/2, 30, Color.Purple));
+            world.Spawn (new MarkRay (new XY(0,The.Player.Position.Y), 0, 30 ,Color.Purple));
             
                 }
 

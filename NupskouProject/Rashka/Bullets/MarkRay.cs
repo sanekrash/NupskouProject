@@ -31,19 +31,22 @@ namespace NupskouProject.Rashka.Bullets {
             const int duration = 60;
             if (t >= duration) {
                 Despawn ();
-                return;
             }
-            _w = _w * (duration - t) / duration;
         }
+        
+        public override void OnDespawn () {
+            The.World.Spawn (new RayCast (_p,_rotation , _w, Color.Purple));
+        }
+
 
 
         public override void Render () {
             var renderer = The.Renderer;
             
-            renderer.Bullets.DrawCircle (_p, _color, _w);
-            renderer.Bullets.DrawRay (_p, _rotation, _color, _w * 2, 1000);
-            renderer.BulletsFront.DrawCircle (_p, Color.White, _w / 2);
-            renderer.BulletsFront.DrawRay (_p, _rotation, Color.White, _w, 1000);
+            renderer.Bullets.DrawCircle (_p, _color, 1);
+            renderer.Bullets.DrawRay (_p, _rotation, _color, 1 * 2, 1000);
+            renderer.BulletsFront.DrawCircle (_p, Color.White, 1 / 2);
+            renderer.BulletsFront.DrawRay (_p, _rotation, Color.White, 1, 1000);
         }
 
     }
