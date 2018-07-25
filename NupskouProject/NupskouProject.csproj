@@ -92,6 +92,7 @@
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
     <Compile Include="Rendering\Sprite.cs" />
+    <Compile Include="Stages\Stage1.cs" />
     <Compile Include="Utils\ListExt.cs" />
     <Compile Include="Utils\RandomExtension.cs" />
     <Compile Include="Utils\SpriteBatchExtension.cs" />
