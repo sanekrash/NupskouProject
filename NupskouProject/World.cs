@@ -62,8 +62,8 @@ namespace NupskouProject {
 //                Spawn (new DoubleSpiral (BossPlace));
 //                Spawn (new Recursion (BossPlace));
 //                Spawn (new GsomRaycaster (BossPlace));
-//                  Spawn (new ShootTheLalkaSpawner(BossPlace));
-                  Spawn (new Stage1() );
+                  Spawn (new ShootTheLalkaSpawner(BossPlace));
+//                  Spawn (new Stage1() );
             }
         }
 
