@@ -2,6 +2,7 @@
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Bullets;
+using NupskouProject.Utils;
 
 
 namespace NupskouProject.Raden.Skills {
@@ -15,10 +16,15 @@ namespace NupskouProject.Raden.Skills {
 
 
         public override void Update (int t) {
-            if (t % 180 == 0) {
-                The.World.Spawn (new ExplosiveRocket (_p, 4, The.Player.Position,                      Color.Lime));
-                The.World.Spawn (new ExplosiveRocket (_p, 3, XY.Lerp (_p, The.Player.Position, 0.75f), Color.Lime));
-                The.World.Spawn (new ExplosiveRocket (_p, 2, XY.Lerp (_p, The.Player.Position, 0.5f),  Color.Lime));
+            if (t % 180 != 0) return;
+
+            var world = The.World;
+
+            int n = The.Difficulty.Choose (3, 4, 6, 6);
+            for (int i = n; i > 1; i--) {
+                float coeff = i / (float) n;
+                var target = XY.Lerp (_p, The.Player.Position, coeff);
+                world.Spawn (new ExplosiveRocket (_p, 4 * coeff, target, Color.Lime));
             }
         }
 

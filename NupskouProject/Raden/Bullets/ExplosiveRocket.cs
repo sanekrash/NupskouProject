@@ -45,8 +45,8 @@ namespace NupskouProject.Raden.Bullets {
             // 2 12 3  72
             // 2 16 3  96
 
-            int ringSize = 20; //The.Difficulty == Difficulty.Hard ? 12 : 16;
-            int lineSize = 2;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
+            int ringSize = 20;
+            int lineSize = The.Difficulty == Difficulty.Lunatic ? 3 : 2;
 
             foreach (var v in Danmaku.Ring (XY.Up, ringSize))
             foreach (var w in Danmaku.Line (v, 1f, 1.5f, lineSize)) {

@@ -11,6 +11,11 @@ namespace NupskouProject.Raden.Utils {
         }
 
 
+        public XY Position (int t) {
+            throw new NotImplementedException();
+        }
+
+
         public void Wait (int t) {
             throw new NotImplementedException();
         }
