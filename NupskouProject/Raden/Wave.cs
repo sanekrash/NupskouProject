@@ -9,7 +9,6 @@ namespace NupskouProject.Raden {
 
         private IList <Entity> _entities;
         private int            _interval;
-        private int            _current;
 
 
         public Wave (IList <Entity> entities, int interval) {
