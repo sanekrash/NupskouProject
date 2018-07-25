@@ -84,6 +84,8 @@
     <Compile Include="Raden\Stages\TestStage.cs" />
     <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
+    <Compile Include="Rashka\Bullets\MarkRay.cs" />
+    <Compile Include="Rashka\Bullets\RayCast.cs" />
     <Compile Include="Rashka\ShootTheLalkaSpawner.cs" />
     <Compile Include="Rashka\Spawner.cs" />
     <Compile Include="Rashka\TornadoShotSpawner.cs" />
