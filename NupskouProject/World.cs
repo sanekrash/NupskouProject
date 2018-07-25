@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
 
 
@@ -56,7 +57,8 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-                Spawn (new ShootTheLalkaSpawner (BossPlace));
+                Spawn (new SunflowerSpawner ());
+//                Spawn (new ShootTheLalkaSpawner (BossPlace));
             }
         }
 

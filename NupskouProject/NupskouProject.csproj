@@ -86,6 +86,7 @@
     <Compile Include="Raden\Stages\Stage1.cs" />
     <Compile Include="Raden\Utils\Clock.cs" />
     <Compile Include="Raden\Utils\Trajectory.cs" />
+    <Compile Include="Raden\Wave.cs" />
     <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
     <Compile Include="Rashka\Bullets\MarkRay.cs" />
