@@ -29,9 +29,9 @@ namespace NupskouProject.Rashka
                 if (t % 15 == 0) {
                 SpawnDanmaku ();
             }
-            if (t % 60 == 0){
-            world.Spawn (new MarkRay (new XY(The.Player.Position.X,0), Mathf.PI/2, 30, Color.Purple));
-            world.Spawn (new MarkRay (new XY(0,The.Player.Position.Y), 0, 30 ,Color.Purple));
+            if (t % 120 == 0){
+            world.Spawn (new MarkRay (new XY(The.Player.Position.X,0), Mathf.PI/2, 60, Color.Purple));
+            world.Spawn (new MarkRay (new XY(0,The.Player.Position.Y), 0, 60 ,Color.Purple));
             
                 }
 

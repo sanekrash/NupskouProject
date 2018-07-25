@@ -28,7 +28,7 @@ namespace NupskouProject.Rashka.Bullets {
 
         public override void Update () {
             int t = The.World.Time - _t0;
-            const int duration = 60;
+            const int duration = 120;
             if (t >= duration) {
                 Despawn ();
             }
