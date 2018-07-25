@@ -40,10 +40,10 @@ namespace NupskouProject.Rashka.Bullets {
         public override void Render () {
             var renderer = The.Renderer;
             
-            renderer.Bullets.DrawCircle (_p, _color, _w);
-            renderer.Bullets.DrawRay (_p, _rotation, _color, _w * 2, 1000);
-            renderer.BulletsFront.DrawCircle (_p, Color.White, _w / 2);
-            renderer.BulletsFront.DrawRay (_p, _rotation, Color.White, _w, 1000);
+            renderer.BulletsBack.DrawCircle (_p, _color, _w);
+            renderer.BulletsBack.DrawRay (_p, _rotation, _color, _w * 2, 1000);
+            renderer.Bullets.DrawCircle (_p, Color.White, _w / 2);
+            renderer.Bullets.DrawRay (_p, _rotation, Color.White, _w, 1000);
         }
 
     }
