@@ -12,6 +12,7 @@ namespace NupskouProject.Rashka {
 
         private XY  _p;
         private int _w;
+        
 
 
         public ShootTheLalkaSpawner (XY p) {

@@ -40,8 +40,6 @@ namespace NupskouProject.Rashka.Bullets {
 
             renderer.BulletsBack.DrawCircle (_p, _color, _w);
             renderer.BulletsBack.DrawRay (_p, _rotation, _color, _w * 2, 1000);
-            renderer.Bullets.DrawCircle (_p, Color.Black, _w / 2);
-            renderer.Bullets.DrawRay (_p, _rotation, Color.Black, _w, 1000);
         }
 
     }

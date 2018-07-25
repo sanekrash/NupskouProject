@@ -53,11 +53,11 @@ namespace NupskouProject {
         protected virtual void OnUpdate () {
             if (Time == 0) {
                 Spawn (The.Player = new Player (PlayerPlace));
-                Spawn (new Raden.Stages.Stage1 ());
+//                Spawn (new Raden.Stages.Stage1 ());
             }
-//            if (Time == 120) {
-//                Spawn (new ShootTheLalkaSpawner (BossPlace));
-//            }
+            if (Time == 120) {
+                Spawn (new ShootTheLalkaSpawner (BossPlace));
+            }
         }
 
 
