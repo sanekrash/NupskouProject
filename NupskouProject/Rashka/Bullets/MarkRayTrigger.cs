@@ -34,7 +34,8 @@ namespace NupskouProject.Rashka.Bullets {
             if (t >= duration) {
                 Despawn ();
             }
-            _w = _wRay * (duration - t) / duration;
+
+            _w = _wRay * t / duration;
         }
         
         public override void OnDespawn () {
@@ -46,10 +47,10 @@ namespace NupskouProject.Rashka.Bullets {
         public override void Render () {
             var renderer = The.Renderer;
             
-            renderer.Bullets.DrawCircle (_p, _color, 1);
-            renderer.Bullets.DrawRay (_p, _rotation, _color, 1 * 2, 1000);
-            renderer.BulletsFront.DrawCircle (_p, Color.White, 1 / 2);
-            renderer.BulletsFront.DrawRay (_p, _rotation, Color.White, 1, 1000);
+            renderer.Bullets.DrawCircle (_p, _color, _w);
+            renderer.Bullets.DrawRay (_p, _rotation, _color, _w * 2, 1000);
+            renderer.BulletsFront.DrawCircle (_p, Color.Black, _w / 2);
+            renderer.BulletsFront.DrawRay (_p, _rotation, Color.Black, _w, 1000);
         }
 
     }
