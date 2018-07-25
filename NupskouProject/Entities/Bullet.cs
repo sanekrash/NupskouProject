@@ -11,7 +11,6 @@ namespace NupskouProject.Entities {
         private readonly XY    _v;
         private readonly Color _color;
 
-        private int _t0;
         private XY  _p;
 
 
@@ -22,13 +21,8 @@ namespace NupskouProject.Entities {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            _p = _p0 + (The.World.Time - _t0) * _v;
+        public override void Update (int t) {
+            _p = _p0 + t * _v;
             if (!Geom.CircleOverBox (new Circle (_p, 6), World.Box)) {
                 Despawn ();
             }

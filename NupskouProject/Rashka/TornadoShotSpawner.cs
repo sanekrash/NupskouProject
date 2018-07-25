@@ -22,8 +22,7 @@ namespace NupskouProject.Rashka {
         }
 
 
-        public override void Update () {
-            int t = The.World.Time - _t0;
+        public override void Update (int t) {
             if (t % 90 == 0) {
                 t /= 90;
                 float angle = Mathf.phiAngle + (1.24f*t);

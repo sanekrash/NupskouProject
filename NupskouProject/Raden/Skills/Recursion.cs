@@ -10,17 +10,13 @@ namespace NupskouProject.Raden.Skills {
 
     public class Recursion : Entity {
 
-        private XY  _p;
-        private int _t0;
+        private XY _p;
 
 
         public Recursion (XY p) { _p = p; }
 
-        public override void OnSpawn () { _t0 = The.World.Time; }
 
-
-        public override void Update () {
-            int   t = (The.World.Time - _t0);
+        public override void Update (int t) {
             Color color;
             switch (t % 1800) {
                 case 0:

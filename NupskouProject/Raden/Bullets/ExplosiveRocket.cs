@@ -10,7 +10,6 @@ namespace NupskouProject.Raden.Bullets {
 
     public class ExplosiveRocket : Entity {
 
-        private int   _t0;
         private int   _tExplosion;
         private XY    _p0, _p, _v;
         private XY    _target;
@@ -26,17 +25,8 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void OnDespawn () {}
-
-
-        public override void Update () {
+        public override void Update (int t) {
             The.World.Spawn (new Smoke (_p - new XY (_v.Angle) * 5, _smokeColor, The.Random.Float (5, 10)));
-            int t = The.World.Time - _t0;
             _p = _p0 + t * _v;
             if (t >= _tExplosion) Explode ();
         }

@@ -11,16 +11,12 @@ namespace NupskouProject.Raden.Skills {
     public class Sunflower : Entity {
 
         private readonly XY  _p;
-        private          int _t0;
 
         public Sunflower (XY p) { _p = p; }
 
-        public override void OnSpawn () { _t0 = The.World.Time; }
 
-
-        public override void Update () {
+        public override void Update (int t) {
             var world = The.World;
-            int t     = world.Time - _t0;
             if (t == 30) {
                 var v = new XY (The.Random.Angle ());
                 foreach (var w in Danmaku.Ring (4 * v, 12)) {

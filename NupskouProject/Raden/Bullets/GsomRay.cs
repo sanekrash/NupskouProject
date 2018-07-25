@@ -11,7 +11,6 @@ namespace NupskouProject.Raden.Bullets {
         private readonly XY _p;
         private readonly float _rotation;
 
-        private int _t0;
         private float _w;
         
         
@@ -22,11 +21,7 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () { _t0 = The.World.Time; }
-
-
-        public override void Update () {
-            int t = The.World.Time - _t0;
+        public override void Update (int t) {
             const int duration = 60;
             if (t >= duration) {
                 Despawn ();

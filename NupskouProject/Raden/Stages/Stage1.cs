@@ -8,16 +8,8 @@ namespace NupskouProject.Raden.Stages {
 
     public class Stage1 : Entity {
 
-        private int _t0;
 
-
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            int t = The.World.Time - _t0;
+        public override void Update (int t) {
             switch (t) {
                 case 120:
                     The.World.Spawn (

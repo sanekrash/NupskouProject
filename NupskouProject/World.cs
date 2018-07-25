@@ -23,6 +23,7 @@ namespace NupskouProject {
 
         public void Spawn (Entity entity) {
             _entities.Add (entity);
+            entity.T0 = Time;
             entity.OnSpawn ();
         }
 
@@ -37,7 +38,7 @@ namespace NupskouProject {
             for (int i = 0; i < _entities.Count; i++) {
                 var entity = _entities[i];
                 if (entity.Despawned) continue;
-                entity.Update ();
+                entity.Update (Time - entity.T0);
             }
             _entities.RemoveAll (e => e.Despawned);
 //            foreach (var entity in _entities) {

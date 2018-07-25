@@ -13,42 +13,35 @@ namespace NupskouProject.Rashka.Bullets {
         private readonly float _rotation;
         private readonly Color _color;
 
-        private int _t0;
-        private XY  _p;
-        
+        private XY _p;
 
 
         public BounceArrow (XY p0, XY v, Color color) {
-            _p     = _p0 = p0;
-            _v     = v;
-            _color = color;
+            _p        = _p0 = p0;
+            _v        = v;
+            _color    = color;
             _rotation = _v.Angle;
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void OnDespawn () {
-        }
-
-
-        public override void Update () {
-            _p = _p0 + (The.World.Time - _t0) * _v;
+        public override void Update (int t) {
+            _p = _p0 + t * _v;
             if (!Geom.CircleInBox (new Circle (_p, 6), World.Box)) {
-                Despawn ();
-                foreach (var v in Danmaku.Spray(-_v , Mathf.PI / 2 , 3) ) {
-                    The.World.Spawn (new Arrow(_p, v/4, Color.Red)) ;
-                }
+                Explode ();
+            }
+        }
 
+
+        private void Explode () {
+            Despawn ();
+            foreach (var v in Danmaku.Spray (-_v, Mathf.PI / 2, 3)) {
+                The.World.Spawn (new Arrow (_p, v / 4, Color.Red));
             }
         }
 
 
         public override void Render () {
-           The.Renderer.Bullets.DrawArrow(_p,_rotation , _color,3);
+            The.Renderer.Bullets.DrawArrow (_p, _rotation, _color, 3);
         }
 
     }

@@ -8,7 +8,6 @@ namespace NupskouProject.Raden.Skills {
 
     public class SunflowerSpawner : Entity {
 
-        private int _t0;
         private XY  _prevSpawn = World.PlayerPlace;
 
 
@@ -20,13 +19,7 @@ namespace NupskouProject.Raden.Skills {
         );
 
 
-        public override void OnSpawn () { _t0 = The.World.Time; }
-
-
-        public override void Update () {
-            int t        = The.World.Time - _t0;
-            var worldBox = World.Box;
-            var random   = The.Random;
+        public override void Update (int t) {
             int interval = The.Difficulty.Choose (180, 120, 90, 60);
 
             if (t % interval == 0) {

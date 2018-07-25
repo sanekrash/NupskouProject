@@ -14,8 +14,7 @@ namespace NupskouProject.Raden.Bullets {
         private readonly Color _color;
         private readonly Color _smokeColor;
 
-        private int _t0;
-        private XY  _p;
+        private XY _p;
 
 
         public Rocket (XY p0, XY v, Color color) {
@@ -27,14 +26,9 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
+        public override void Update (int t) {
             The.World.Spawn (new Smoke (_p, _smokeColor, The.Random.Float (5, 10)));
-            _p = _p0 + (The.World.Time - _t0) * _v;
+            _p = _p0 + t * _v;
             if (!Geom.CircleOverBox (new Circle (_p, 8), World.Box)) {
                 Despawn ();
             }

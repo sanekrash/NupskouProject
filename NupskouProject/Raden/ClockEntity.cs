@@ -7,8 +7,8 @@ namespace NupskouProject.Raden {
 
     public class ClockEntity : Entity {
 
-        private Clock _clock;
-        private int   _t0;
+        private readonly Clock _clock;
+        private          int   _t0;
 
 
         public ClockEntity (Func <int, bool> f, int interval) {
@@ -21,8 +21,8 @@ namespace NupskouProject.Raden {
         }
 
 
-        public override void OnSpawn () { _t0 = The.World.Time; }
-        public override void Update ()  { _clock.Update (The.World.Time - _t0); }
+        public override void OnSpawn ()     { _t0 = The.World.Time; }
+        public override void Update (int t) { _clock.Update (t); }
 
     }
 

@@ -12,7 +12,6 @@ namespace NupskouProject.Raden.Bullets {
         private          int  _x;
         private readonly int  _y;
         private readonly int  _tUpdate;
-        private          int  _t0;
 
 
         public Digit (bool one, int y, int tUpdate) {
@@ -23,13 +22,8 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            _x = 31 - (The.World.Time - _t0) / _tUpdate;
+        public override void Update (int t) {
+            _x = 31 - t / _tUpdate;
             if (_x < 0) Despawn ();
         }
 

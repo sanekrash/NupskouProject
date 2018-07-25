@@ -27,7 +27,7 @@ namespace NupskouProject {
         }
 
 
-        public override void Update () {
+        public override void Update (int t) {
             var keyboard = Keyboard.GetState ();
             bool shift =
             _hitboxVisible = keyboard.IsKeyDown (Keys.LeftShift);

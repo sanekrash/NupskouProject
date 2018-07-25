@@ -13,13 +13,12 @@ namespace NupskouProject.Raden.Enemies {
         private float _a;
         private Color _color;
 
-        private int _t0;
-        private XY  _p;
+        private XY _p;
 
 
         public Ufo (Color color) {
             _color = color;
-            
+
             var random   = The.Random;
             var worldBox = World.Box;
             switch (random.Next (5)) {
@@ -52,7 +51,7 @@ namespace NupskouProject.Raden.Enemies {
                             worldBox.Left,
                             Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0, 0.4f))
                         ),
-                        new XY (random.Float (2, 3), random.Float(1.5f, 2.5f)),
+                        new XY (random.Float (2, 3), random.Float (1.5f, 2.5f)),
                         -0.02f
                     );
                     break;
@@ -63,7 +62,7 @@ namespace NupskouProject.Raden.Enemies {
                             worldBox.Right,
                             Mathf.Lerp (worldBox.Top, worldBox.Bottom, random.Float (0, 0.4f))
                         ),
-                        new XY (-random.Float (2, 3), random.Float(1.5f, 2.5f)),
+                        new XY (-random.Float (2, 3), random.Float (1.5f, 2.5f)),
                         -0.02f
                     );
                     break;
@@ -74,7 +73,7 @@ namespace NupskouProject.Raden.Enemies {
                             Mathf.Lerp (worldBox.Left, worldBox.Right, random.Float (0.1f, 0.8f)),
                             worldBox.Top
                         ),
-                        new XY (0, random.Float(2, 3)),
+                        new XY (0, random.Float (2, 3)),
                         -0.02f
                     );
                     break;
@@ -83,21 +82,15 @@ namespace NupskouProject.Raden.Enemies {
 
 
         public void Init (XY p0, XY v0, float a) {
-            _p     = _p0 = p0;
-            _v0    = v0;
-            _a     = a;
+            _p  = _p0 = p0;
+            _v0 = v0;
+            _a  = a;
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            int t = The.World.Time - _t0;
+        public override void Update (int t) {
             _p = _p0 + t * _v0 + new XY (0, t * t * _a * 0.5f);
-            
+
             if (t > 0 && !World.Box.ContainsPoint (_p)) {
                 Despawn ();
                 return;
@@ -105,7 +98,7 @@ namespace NupskouProject.Raden.Enemies {
 
             if (t % 15 == 0) {
                 The.World.Spawn (new PetalBullet (_p, (The.Player.Position - _p).WithLength (2), Color.Magenta));
-                foreach (var v in Danmaku.Spray (new XY(0, 1.5f), Mathf.PI / 6, 2)) {
+                foreach (var v in Danmaku.Spray (new XY (0, 1.5f), Mathf.PI / 6, 2)) {
                     The.World.Spawn (new PetalBullet (_p, v, Color.Yellow));
                 }
             }

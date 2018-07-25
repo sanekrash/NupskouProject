@@ -14,8 +14,7 @@ namespace NupskouProject.Raden.Bullets {
         private readonly Color _color;
         private readonly int   _rank;
 
-        private int _t0;
-        private XY  _p;
+        private XY _p;
 
 
         public RecursiveBullet (XY p0, XY v, Color color, int rank) {
@@ -27,13 +26,7 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            int t = The.World.Time - _t0;
+        public override void Update (int t) {
             _p = _p0 + t * _v;
             if (_rank > 1 && t == 30) {
                 Split ();
@@ -46,7 +39,7 @@ namespace NupskouProject.Raden.Bullets {
 
         private void Split () {
             Despawn ();
-            foreach (var v in Danmaku.Spray (_v, /*2 * */Mathf.PI/* - Mathf.phiAngle*/, _rank)) {
+            foreach (var v in Danmaku.Spray (_v, /*2 * */Mathf.PI /* - Mathf.phiAngle*/, _rank)) {
                 The.World.Spawn (new RecursiveBullet (_p, v, _color, _rank - 1));
             }
         }

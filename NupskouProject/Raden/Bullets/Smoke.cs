@@ -12,7 +12,6 @@ namespace NupskouProject.Raden.Bullets {
         private readonly Color _color;
         private readonly float _r0;
 
-        private int   _t0;
         private float _r;
 
 
@@ -23,16 +22,9 @@ namespace NupskouProject.Raden.Bullets {
         }
 
 
-        public override void OnSpawn () {
-            _t0 = The.World.Time;
-        }
-
-
-        public override void Update () {
-            _r = _r0 - (The.World.Time - _t0) * 0.2f;
-            if (_r <= 0) {
-                Despawn ();
-            }
+        public override void Update (int t) {
+            _r = _r0 - t * 0.2f;
+            if (_r <= 0) Despawn ();
         }
 
 
