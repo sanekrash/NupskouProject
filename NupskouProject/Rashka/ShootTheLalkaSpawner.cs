@@ -31,7 +31,7 @@ namespace NupskouProject.Rashka {
                         new XY (The.Player.Position.X, 0),
                         Mathf.PI / 2,
                         60,
-                        Color.Green
+                        Color.LimeGreen
                     )
                 );
                 world.Spawn (
@@ -39,7 +39,7 @@ namespace NupskouProject.Rashka {
                         new XY (0, The.Player.Position.Y),
                         0,
                         60,
-                        Color.Green
+                        Color.LimeGreen
                     )
                 );
             }
