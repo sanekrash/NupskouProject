@@ -58,7 +58,7 @@ namespace NupskouProject.Raden.Skills {
                     break;
                 default: return;
             }
-            int bullets = 11;
+            int bullets;
             switch (The.Difficulty) {
                 case Difficulty.Easy:
                     bullets = 5;
@@ -69,9 +69,13 @@ namespace NupskouProject.Raden.Skills {
                 case Difficulty.Hard:
                     bullets = 9;
                     break;
+                case Difficulty.Lunatic:
+                    bullets = 11;
+                    break;
+                default: throw new ArgumentOutOfRangeException ();
             }
             
-            foreach (var w in Danmaku.Ring (v, bullets)) {
+            foreach (var w in Danmaku.Ring (1.5f * v, bullets)) {
                 The.World.Spawn (new RecursiveBullet (_p, w, color, 5));
             }
         }

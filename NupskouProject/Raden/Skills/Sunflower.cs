@@ -23,10 +23,10 @@ namespace NupskouProject.Raden.Skills {
             int t     = world.Time - _t0;
             if (t == 30) {
                 var v = new XY (The.Random.Angle ());
-                foreach (var w in Danmaku.Ring (2 * v, 12)) {
+                foreach (var w in Danmaku.Ring (4 * v, 12)) {
                     world.Spawn (new SunflowerRay (_p, w));
                 }
-                foreach (var w in Danmaku.Ring (2.5f * v.Rotated (Mathf.PI / 12), 12)) {
+                foreach (var w in Danmaku.Ring (5 * v.Rotated (Mathf.PI / 12), 12)) {
                     world.Spawn (new SunflowerRay (_p, w));
                 }
             }
@@ -34,7 +34,7 @@ namespace NupskouProject.Raden.Skills {
                 Despawn ();
                 return;
             }
-            world.Spawn (new PetalBullet (_p, new XY (t * Mathf.phiAngle), Color.Orange));
+            world.Spawn (new PetalBullet (_p, 2 * new XY (t * Mathf.phiAngle), Color.Orange));
         }
 
     }

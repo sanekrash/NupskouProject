@@ -2,6 +2,7 @@
 using NupskouProject.Bullets;
 using NupskouProject.Core;
 using NupskouProject.Math;
+using NupskouProject.Raden.Skills;
 using NupskouProject.Utils;
 
 
@@ -13,7 +14,7 @@ namespace NupskouProject.Raden.Bullets {
         private int   _tExplosion;
         private XY    _p0, _p, _v;
         private XY    _target;
-        private Color _color;
+        private Color _color, _smokeColor;
 
 
         public ExplosiveRocket (XY p0, float v, XY target, Color color) {
@@ -21,7 +22,7 @@ namespace NupskouProject.Raden.Bullets {
             _v          = (target - p0).WithLength (v);
             _target     = target;
             _tExplosion = Mathf.CeilToInt ((target - p0).Length / v);
-            _color      = color;
+            _smokeColor = (_color = color) * 0.2f;
         }
 
 
@@ -34,6 +35,7 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Update () {
+            The.World.Spawn (new Smoke (_p - new XY (_v.Angle) * 5, _smokeColor, The.Random.Float (5, 10)));
             int t = The.World.Time - _t0;
             _p = _p0 + t * _v;
             if (t >= _tExplosion) Explode ();
@@ -53,12 +55,12 @@ namespace NupskouProject.Raden.Bullets {
             // 2 12 3  72
             // 2 16 3  96
 
-            int ringSize = 24; //The.Difficulty == Difficulty.Hard ? 12 : 16;
-            int lineSize = 1;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
+            int ringSize = 20; //The.Difficulty == Difficulty.Hard ? 12 : 16;
+            int lineSize = 2;  //The.Difficulty == Difficulty.Normal ? 2 : 3;
 
-            foreach (var v in Danmaku.Ring (XY.Up, ringSize)) {
-//            foreach (var w in Danmaku.Line (v, 0.5f, 1.0f, lineSize)) {
-                The.World.Spawn (new PetalBullet (_target, v, Color.Yellow));
+            foreach (var v in Danmaku.Ring (XY.Up, ringSize))
+            foreach (var w in Danmaku.Line (v, 1f, 1.5f, lineSize)) {
+                The.World.Spawn (new PetalBullet (_target, w, Color.Yellow));
             }
         }
 

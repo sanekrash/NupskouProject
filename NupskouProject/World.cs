@@ -53,7 +53,7 @@ namespace NupskouProject {
         protected virtual void OnUpdate () {
             if (Time == 0) Spawn (The.Player = new Player (PlayerPlace));
             if (Time == 60) {
-//                Spawn (new RocketSpawner(BossPlace));
+                Spawn (new RocketSpawner(BossPlace));
 //                Spawn (new UfoSpawner ());
 //                Spawn (new SunflowerSpawner ());
 //                Spawn (new DigitSpawner ());

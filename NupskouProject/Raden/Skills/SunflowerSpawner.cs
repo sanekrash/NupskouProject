@@ -1,4 +1,5 @@
-﻿using NupskouProject.Core;
+﻿using System;
+using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Utils;
 
@@ -27,7 +28,24 @@ namespace NupskouProject.Raden.Skills {
             var worldBox = World.Box;
             var random   = The.Random;
 
-            if (t % 60 == 0) {
+            int interval;
+            switch (The.Difficulty) {
+                case Difficulty.Easy:
+                    interval = 180;
+                    break;
+                case Difficulty.Normal:
+                    interval = 120;
+                    break;
+                case Difficulty.Hard:
+                    interval = 90;
+                    break;
+                case Difficulty.Lunatic:
+                    interval = 60;
+                    break;
+                default: throw new ArgumentOutOfRangeException ();
+            }
+
+            if (t % interval == 0) {
                 var a = The.Random.Point (spawnBox);
                 var b = The.Random.Point (spawnBox);
                 _prevSpawn = XY.SqrDistance (a, _prevSpawn) > XY.SqrDistance (b, _prevSpawn) ? a : b;

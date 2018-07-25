@@ -69,6 +69,7 @@
     <Compile Include="Raden\Bullets\Digit.cs" />
     <Compile Include="Raden\Bullets\ExplosiveRocket.cs" />
     <Compile Include="Raden\Bullets\Rocket.cs" />
+    <Compile Include="Raden\Bullets\Smoke.cs" />
     <Compile Include="Raden\Bullets\SunflowerRay.cs" />
     <Compile Include="Raden\Enemies\Ufo.cs" />
     <Compile Include="Raden\EntityList.cs" />
