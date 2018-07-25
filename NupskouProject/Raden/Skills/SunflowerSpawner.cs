@@ -27,23 +27,7 @@ namespace NupskouProject.Raden.Skills {
             int t        = The.World.Time - _t0;
             var worldBox = World.Box;
             var random   = The.Random;
-
-            int interval;
-            switch (The.Difficulty) {
-                case Difficulty.Easy:
-                    interval = 180;
-                    break;
-                case Difficulty.Normal:
-                    interval = 120;
-                    break;
-                case Difficulty.Hard:
-                    interval = 90;
-                    break;
-                case Difficulty.Lunatic:
-                    interval = 60;
-                    break;
-                default: throw new ArgumentOutOfRangeException ();
-            }
+            int interval = The.Difficulty.Choose (180, 120, 90, 60);
 
             if (t % interval == 0) {
                 var a = The.Random.Point (spawnBox);

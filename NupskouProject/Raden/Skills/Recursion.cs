@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Bullets;
+using NupskouProject.Utils;
 
 
 namespace NupskouProject.Raden.Skills {
@@ -58,23 +59,8 @@ namespace NupskouProject.Raden.Skills {
                     break;
                 default: return;
             }
-            int bullets;
-            switch (The.Difficulty) {
-                case Difficulty.Easy:
-                    bullets = 5;
-                    break;
-                case Difficulty.Normal:
-                    bullets = 7;
-                    break;
-                case Difficulty.Hard:
-                    bullets = 9;
-                    break;
-                case Difficulty.Lunatic:
-                    bullets = 11;
-                    break;
-                default: throw new ArgumentOutOfRangeException ();
-            }
-            
+            int bullets = The.Difficulty.Choose (5, 7, 9, 11);
+
             foreach (var w in Danmaku.Ring (1.5f * v, bullets)) {
                 The.World.Spawn (new RecursiveBullet (_p, w, color, 5));
             }
