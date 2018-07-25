@@ -15,7 +15,7 @@ namespace NupskouProject.Rashka {
 
         private XY  _p;
         private int _w;
-        private byte shotgun;
+
         
 
 
