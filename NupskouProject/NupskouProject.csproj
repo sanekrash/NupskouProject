@@ -71,6 +71,8 @@
     <Compile Include="Raden\Bullets\Rocket.cs" />
     <Compile Include="Raden\Bullets\Smoke.cs" />
     <Compile Include="Raden\Bullets\SunflowerRay.cs" />
+    <Compile Include="Raden\ClockEntity.cs" />
+    <Compile Include="Raden\Enemies\Enemy.cs" />
     <Compile Include="Raden\Enemies\Ufo.cs" />
     <Compile Include="Raden\EntityList.cs" />
     <Compile Include="Raden\Skills\GsomRaycaster.cs" />
@@ -81,7 +83,8 @@
     <Compile Include="Raden\Skills\Sunflower.cs" />
     <Compile Include="Raden\Skills\SunflowerSpawner.cs" />
     <Compile Include="Raden\Skills\UfoSpawner.cs" />
-    <Compile Include="Raden\Stages\TestStage.cs" />
+    <Compile Include="Raden\Stages\Stage1.cs" />
+    <Compile Include="Raden\Utils\Clock.cs" />
     <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
     <Compile Include="Rashka\Bullets\MarkRay.cs" />

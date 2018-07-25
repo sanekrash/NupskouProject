@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using NupskouProject.Core;
 using NupskouProject.Math;
-using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
-using NupskouProject.Stages;
 
 
 namespace NupskouProject {
@@ -52,19 +50,13 @@ namespace NupskouProject {
 
 
         protected virtual void OnUpdate () {
-            if (Time == 0) Spawn (The.Player = new Player (PlayerPlace));
-            if (Time == 60) {
-//                Spawn (new RocketSpawner(BossPlace));
-//                Spawn (new UfoSpawner ());
-//             Spawn (new SunflowerSpawner ());
-//                Spawn (new DigitSpawner ());
-//                Spawn (new TornadoShotSpawner (BossPlace));
-//                Spawn (new DoubleSpiral (BossPlace));
-//                Spawn (new Recursion (BossPlace));
-//                Spawn (new GsomRaycaster (BossPlace));
-                  Spawn (new ShootTheLalkaSpawner(BossPlace));
-//                  Spawn (new Stage1() );
+            if (Time == 0) {
+                Spawn (The.Player = new Player (PlayerPlace));
+                Spawn (new Raden.Stages.Stage1 ());
             }
+//            if (Time == 120) {
+//                Spawn (new ShootTheLalkaSpawner (BossPlace));
+//            }
         }
 
 
