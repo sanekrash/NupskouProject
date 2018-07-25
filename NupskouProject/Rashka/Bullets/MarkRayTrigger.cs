@@ -5,21 +5,23 @@ using NupskouProject.Math;
 
 namespace NupskouProject.Rashka.Bullets {
 
-    public class MarkRay : Entity {
+    public class MarkRayTrigger : Entity {
 
         private readonly XY _p;
         private readonly float _rotation;
 
         private int _t0;
+        private float _wRay;
         private float _w;
         private Color _color;
         
         
-        public MarkRay (XY p, float rotation, float w, Color color) {
+        public MarkRayTrigger (XY p, float rotation, float wRay, Color color) {
             _p = p;
             _rotation = rotation;
-            _w = w;
+            _wRay = wRay;
             _color = color;
+            _w = 1;
         }
 
 
@@ -32,9 +34,11 @@ namespace NupskouProject.Rashka.Bullets {
             if (t >= duration) {
                 Despawn ();
             }
+            _w = _wRay * (duration - t) / duration;
         }
         
         public override void OnDespawn () {
+            The.World.Spawn (new RayCast (_p,_rotation , _wRay, Color.Purple));
         }
 
 

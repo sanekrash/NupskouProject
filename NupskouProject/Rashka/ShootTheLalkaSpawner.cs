@@ -11,11 +11,13 @@ namespace NupskouProject.Rashka
     {
         private XY  _p;
         private int _t0;
+        private int _w;
 
 
         public ShootTheLalkaSpawner (XY p) {
             _p = p;
         }
+        
 
 
         public override void OnSpawn () {
@@ -30,8 +32,8 @@ namespace NupskouProject.Rashka
                 SpawnDanmaku ();
             }
             if (t % 120 == 0){
-            world.Spawn (new MarkRay (new XY(The.Player.Position.X,0), Mathf.PI/2, 60, Color.Purple));
-            world.Spawn (new MarkRay (new XY(0,The.Player.Position.Y), 0, 60 ,Color.Purple));
+            world.Spawn (new MarkRayTrigger (new XY(The.Player.Position.X,0), Mathf.PI/2, 60, Color.Purple));
+            world.Spawn (new MarkRayTrigger (new XY(0,The.Player.Position.Y), 0, 60 ,Color.Purple));
             
                 }
 
