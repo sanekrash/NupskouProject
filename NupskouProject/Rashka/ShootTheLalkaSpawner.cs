@@ -51,9 +51,27 @@ namespace NupskouProject.Rashka {
                         Color.LimeGreen
                     )
                 );
+                if (The.Difficulty >= Difficulty.Hard) {
+                                    world.Spawn (
+                    new MarkRayTrigger (
+                        new XY (0, The.Player.Position.Y-The.Player.Position.X),
+                        Mathf.PI / 4,
+                        _w,
+                        Color.LimeGreen
+                    )
+                );
+                    world.Spawn (
+                        new MarkRayTrigger (
+                            new XY (0, The.Player.Position.Y+The.Player.Position.X),
+                            - Mathf.PI / 4,
+                            _w,
+                            Color.LimeGreen
+                        )
+                    );
+                    }
             }
 
-            if (t % 360 < 90 && t % _danmakuInterval1 == 0 && !(t <= 90))
+            /*if (t % 360 < 90 && t % _danmakuInterval1 == 0 && !(t <= 90))
             {
                 if (The.Difficulty <= Difficulty.Easy) {
                     The.World.Spawn(new MarkRayTrigger(_p,
@@ -83,7 +101,7 @@ namespace NupskouProject.Rashka {
                 }
                 
             
-        }
+        }*/
             }
 
 
