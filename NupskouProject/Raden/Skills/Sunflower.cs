@@ -19,12 +19,12 @@ namespace NupskouProject.Raden.Skills {
             var world = The.World;
             if (t % 60 == 0) {
                 var v = new XY (The.Random.Angle ());
-                foreach (var w in Danmaku.Ring (4 * v, 12)) {
+                foreach (var w in Danmaku.Ring (4 * v, 24)) {
                     world.Spawn (new SunflowerRay (_p, w));
                 }
-                foreach (var w in Danmaku.Ring (5 * v.Rotated (Mathf.PI / 12), 12)) {
-                    world.Spawn (new SunflowerRay (_p, w));
-                }
+//                foreach (var w in Danmaku.Ring (5 * v.Rotated (Mathf.PI / 12), 12)) {
+//                    world.Spawn (new SunflowerRay (_p, w));
+//                }
             }
             if (t >= 120) {
                 Despawn ();
