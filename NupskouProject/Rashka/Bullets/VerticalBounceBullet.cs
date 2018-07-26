@@ -30,16 +30,14 @@ namespace NupskouProject.Rashka.Bullets {
             if (!Geom.CircleInVerticalBorders (new Circle (_p, 6), World.Box)) {
                 Explode ();
             }
-            if (!Geom.CircleOverBox (new Circle (_p, 6), World.Box)) {
-                Despawn ();
-            }
+
         }
 
 
         private void Explode ()
         {
             Despawn();
-            The.World.Spawn (new VerticalBounceBullet (_p, new XY(-_v.X,_v.Y), _color));
+            The.World.Spawn (new VerticalBounceBullet (_p+new XY(-_v.X,_v.Y), new XY(-_v.X,_v.Y), _color));
         }
 
 

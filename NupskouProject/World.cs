@@ -57,8 +57,8 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-                Spawn (new RocketSpawner (BossPlace));
-//               Spawn(new SmileSpawner());
+//                Spawn (new RocketSpawner (BossPlace));
+               Spawn(new SmileSpawner());
             }
         }
 
