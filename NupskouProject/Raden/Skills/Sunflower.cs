@@ -17,7 +17,7 @@ namespace NupskouProject.Raden.Skills {
 
         public override void Update (int t) {
             var world = The.World;
-            if (t % 90 == 0) {
+            if (t % 60 == 0) {
                 var v = new XY (The.Random.Angle ());
                 foreach (var w in Danmaku.Ring (4 * v, 12)) {
                     world.Spawn (new SunflowerRay (_p, w));
@@ -26,11 +26,13 @@ namespace NupskouProject.Raden.Skills {
                     world.Spawn (new SunflowerRay (_p, w));
                 }
             }
-            if (t >= 180) {
+            if (t >= 120) {
                 Despawn ();
                 return;
             }
-            world.Spawn (new PetalBullet (_p, 2 * new XY (t * Mathf.phiAngle), Color.Orange));
+            foreach (var v in Danmaku.Ring (2 * new XY (t * Mathf.phiAngle / 2), 2)) {
+                world.Spawn (new PetalBullet (_p, v, Color.Orange));
+            }
         }
 
     }
