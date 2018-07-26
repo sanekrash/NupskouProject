@@ -57,13 +57,13 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-<<<<<<< HEAD
+
               Spawn (new ShootTheLalkaSpawner ());
 //                Spawn(new SunflowerSpawner());
 //                Spawn(new Recursion(BossPlace));
-=======
+
                 Spawn (new DoubleSpiral (Box.Center));
->>>>>>> e02435315a5e75b717eba9dd8075e43fe3f6999c
+
             }
         }
 
