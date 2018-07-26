@@ -11,7 +11,11 @@ namespace NupskouProject.Rashka
         
         public override void Update (int t) {
 
-            The.World.Spawn (new VerticalBounceBullet (new XY(100,100), new XY(Mathf.PI/1.5f) , Color.Blue));
+        }
+
+        private void SpawnSmile()
+        {
+            
         }
     }
 }
