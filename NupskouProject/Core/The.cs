@@ -1,7 +1,4 @@
 ﻿using System;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using NupskouProject.Math;
 using NupskouProject.Rendering;
 
 
@@ -14,7 +11,10 @@ namespace NupskouProject.Core {
         public static Random      Random     = new Random ();
         public static Renderer    Renderer   = new Renderer ();
         public static Difficulty  Difficulty = Difficulty.Normal;
+<<<<<<< HEAD
 //        public static SpriteBatch SpriteBatch;
+=======
+>>>>>>> f89f572a53c5b3c44d29c1927f60a66f32f904b5
         public static Player Player;
 
     }

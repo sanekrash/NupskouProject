@@ -14,19 +14,11 @@ namespace NupskouProject.Rashka {
 
     public class ShootTheLalkaSpawner : Entity {
 
-        private XY  _p;
         private int _w = The.Difficulty.Choose (30, 30, 30, 45);
         private int _danmakuInterval = The.Difficulty.Choose (25, 15, 15, 15);
         private int _danmakuInterval1 = The.Difficulty.Choose (180, 180, 180, 120);
 
         private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/18, Mathf.PI/12, Mathf.PI/9);
-
-        
-
-
-        public ShootTheLalkaSpawner (XY p) {
-            _p = p;
-        }
 
 
         public override void Update (int t) {
