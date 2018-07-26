@@ -14,9 +14,9 @@ namespace NupskouProject.Rashka {
     public class ShootTheLalkaSpawner : Entity {
 
         private XY  _p;
-        private int _w = The.Difficulty.Choose (15, 30, 45, 60);
-        private int _danmakuInterval = The.Difficulty.Choose (55, 35, 25, 15);
-        private int _danmakuInterval1 = The.Difficulty.Choose (24, 24, 12, 6);
+        private int _w = The.Difficulty.Choose (30, 30, 45, 60);
+        private int _danmakuInterval = The.Difficulty.Choose (45, 30, 20, 15);
+        private int _danmakuInterval1 = The.Difficulty.Choose (18, 12, 9, 6);
 
         private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/12, Mathf.PI/12);
 
