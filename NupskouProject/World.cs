@@ -58,7 +58,8 @@ namespace NupskouProject {
             }
             if (Time == 120) {
 //                Spawn (new RocketSpawner (BossPlace));
-               Spawn(new SmileSpawner());
+//               Spawn(new SmileSpawner());
+                Spawn(new ShootTheLalkaSpawner(BossPlace));
             }
         }
 

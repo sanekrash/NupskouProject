@@ -46,9 +46,11 @@ namespace NupskouProject.Rashka {
                 );
             }
 
-            if (t % 360 == 0 && t != 0)
+            if (t % 360 < 60 && t % 10 == 0 && !(t <= 60))
             {
-                Shotgun ();
+                The.World.Spawn(new MarkRayTrigger(_p,
+                    XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-Mathf.PI / 6, Mathf.PI / 6), 30,
+                    Color.Red));
             }
         }
 
@@ -66,15 +68,7 @@ namespace NupskouProject.Rashka {
         }
         
 
-        private void Shotgun () {
-            for (int i = 0; i < 6; i++)
-            {
-                The.World.Spawn(new MarkRayTrigger(_p,
-                    XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-Mathf.PI / 4, Mathf.PI / 4), 30,
-                    Color.Red));
 
-            }
-        }
         
 
 
