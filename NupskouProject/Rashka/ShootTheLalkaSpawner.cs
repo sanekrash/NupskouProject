@@ -14,8 +14,6 @@ namespace NupskouProject.Rashka {
     public class ShootTheLalkaSpawner : Entity {
 
         private XY  _p;
-        private int _w;
-
         
 
 

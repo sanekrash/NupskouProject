@@ -89,10 +89,12 @@
     <Compile Include="Raden\Wave.cs" />
     <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
+    <Compile Include="Rashka\Bullets\VerticalBounceBullet.cs" />
     <Compile Include="Rashka\Bullets\MarkRay.cs" />
     <Compile Include="Rashka\Bullets\MarkRayTrigger.cs" />
     <Compile Include="Rashka\Bullets\RayCast.cs" />
     <Compile Include="Rashka\ShootTheLalkaSpawner.cs" />
+    <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\TornadoShotSpawner.cs" />
     <Compile Include="Rendering\Layer.cs" />
     <Compile Include="Rendering\Renderer.cs" />
