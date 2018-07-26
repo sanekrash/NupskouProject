@@ -37,7 +37,7 @@ namespace NupskouProject.Rashka.Bullets {
 
         private void Explode () {
             Despawn ();
-            The.World.Spawn (new VerticalBounceBullet (_p, -_v, _color));
+            The.World.Spawn (new VerticalBounceBullet (_p, new XY(-Mathf.Cos(_v.X),-Mathf.Sin(_v.Y)), _color));
         }
 
 
