@@ -57,7 +57,8 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-                Spawn (new ShootTheLalkaSpawner ());
+               Spawn (new ShootTheLalkaSpawner ());
+//                Spawn(new SunflowerSpawner());
             }
         }
 
