@@ -20,11 +20,6 @@ namespace NupskouProject.Rashka {
 
         private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/12, Mathf.PI/12);
 
-        
-
-
-        public ShootTheLalkaSpawner (XY p) {}
-
 
         public override void Update (int t) {
             var world = The.World;
