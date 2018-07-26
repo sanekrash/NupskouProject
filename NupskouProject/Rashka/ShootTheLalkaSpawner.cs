@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Text;
 using System.Threading;
 using Microsoft.Xna.Framework;
 using NupskouProject.Core;
@@ -16,9 +17,9 @@ namespace NupskouProject.Rashka {
         private XY  _p;
         private int _w = The.Difficulty.Choose (30, 30, 45, 60);
         private int _danmakuInterval = The.Difficulty.Choose (45, 30, 20, 15);
-        private int _danmakuInterval1 = The.Difficulty.Choose (18, 12, 9, 6);
+        private int _danmakuInterval1 = The.Difficulty.Choose (20, 20, 20, 20);
 
-        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/12, Mathf.PI/12);
+        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/6, Mathf.PI/6);
 
         
 
@@ -54,11 +55,36 @@ namespace NupskouProject.Rashka {
 
             if (t % 360 < 90 && t % _danmakuInterval1 == 0 && !(t <= 90))
             {
-                The.World.Spawn(new MarkRayTrigger(_p,
-                    XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, _cone), _w/2f,
-                    Color.Red));
-            }
+                if (The.Difficulty <= Difficulty.Easy) {
+                    The.World.Spawn(new MarkRayTrigger(_p,
+                        XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, _cone), _w / 2f,
+                        Color.Red));
+                }
+                if (The.Difficulty >= Difficulty.Normal) {
+                        The.World.Spawn(new MarkRayTrigger(_p,
+                            XY.DirectionAngle(_p, The.Player.Position) , _w / 2f,
+                            Color.Red));
+                     The.World.Spawn(new MarkRayTrigger(_p,
+                         XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, 0), _w / 2f,
+                         Color.Red));
+                     The.World.Spawn(new MarkRayTrigger(_p,
+                         XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(0, _cone), _w / 2f,
+                         Color.Red));
+                    if (The.Difficulty >= Difficulty.Lunatic)
+                    {
+                        The.World.Spawn(new MarkRayTrigger(_p,
+                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone*2, 0-_cone), _w / 2f,
+                            Color.Red));
+                        The.World.Spawn(new MarkRayTrigger(_p,
+                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, _cone*2), _w / 2f,
+                            Color.Red));
+                    }
+
+                }
+                
+            
         }
+            }
 
 
         private void SpawnDanmaku () {
