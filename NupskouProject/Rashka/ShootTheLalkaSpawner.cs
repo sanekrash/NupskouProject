@@ -19,7 +19,7 @@ namespace NupskouProject.Rashka {
         private int _danmakuInterval = The.Difficulty.Choose (25, 15, 15, 15);
         private int _danmakuInterval1 = The.Difficulty.Choose (180, 180, 180, 90);
 
-        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/12, Mathf.PI/12);
+        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/18, Mathf.PI/12, Mathf.PI/9);
 
         
 
@@ -110,7 +110,7 @@ namespace NupskouProject.Rashka {
                 The.World.Spawn (
                     new Bullet (
                         new XY (The.Random.Float (World.Box.Right, World.Box.Left), 0),
-                        XY.Down,
+                         new XY (Mathf.PI/2 + The.Random.Float(-_cone,_cone)),
                         Color.Red
                     )
                 );
