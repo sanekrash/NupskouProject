@@ -2,6 +2,7 @@
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Utils;
+using OpenGL;
 
 
 namespace NupskouProject.Rashka.Bullets {
@@ -35,9 +36,10 @@ namespace NupskouProject.Rashka.Bullets {
         }
 
 
-        private void Explode () {
-            Despawn ();
-            The.World.Spawn (new VerticalBounceBullet (_p, new XY(-Mathf.Cos(_v.X),-Mathf.Sin(_v.Y)), _color));
+        private void Explode ()
+        {
+            Despawn();
+            The.World.Spawn (new VerticalBounceBullet (_p, new XY(-_v.X,_v.Y), _color));
         }
 
 
