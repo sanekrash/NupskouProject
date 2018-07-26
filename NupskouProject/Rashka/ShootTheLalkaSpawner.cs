@@ -15,9 +15,9 @@ namespace NupskouProject.Rashka {
     public class ShootTheLalkaSpawner : Entity {
 
         private XY  _p;
-        private int _w = The.Difficulty.Choose (30, 30, 45, 60);
-        private int _danmakuInterval = The.Difficulty.Choose (45, 30, 20, 15);
-        private int _danmakuInterval1 = The.Difficulty.Choose (20, 20, 20, 20);
+        private int _w = The.Difficulty.Choose (30, 30, 30, 45);
+        private int _danmakuInterval = The.Difficulty.Choose (25, 15, 15, 15);
+        private int _danmakuInterval1 = The.Difficulty.Choose (180, 180, 180, 90);
 
         private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/12, Mathf.PI/12);
 
@@ -34,7 +34,7 @@ namespace NupskouProject.Rashka {
             if (t % _danmakuInterval == 0) {
                 SpawnDanmaku ();
             }
-            if (t % 180 == 0 && t != 0) {
+            if (t % _danmakuInterval1 == 0 && t != 0) {
                 world.Spawn (
                     new MarkRayTrigger (
                         new XY (The.Player.Position.X, 0),
@@ -51,9 +51,27 @@ namespace NupskouProject.Rashka {
                         Color.LimeGreen
                     )
                 );
+                if (The.Difficulty >= Difficulty.Hard) {
+                                    world.Spawn (
+                    new MarkRayTrigger (
+                        new XY (0, The.Player.Position.Y-The.Player.Position.X),
+                        Mathf.PI / 4,
+                        _w,
+                        Color.LimeGreen
+                    )
+                );
+                    world.Spawn (
+                        new MarkRayTrigger (
+                            new XY (0, The.Player.Position.Y+The.Player.Position.X),
+                            - Mathf.PI / 4,
+                            _w,
+                            Color.LimeGreen
+                        )
+                    );
+                    }
             }
 
-            if (t % 360 < 90 && t % _danmakuInterval1 == 0 && !(t <= 90))
+            /*if (t % 360 < 90 && t % _danmakuInterval1 == 0 && !(t <= 90))
             {
                 if (The.Difficulty <= Difficulty.Easy) {
                     The.World.Spawn(new MarkRayTrigger(_p,
@@ -83,7 +101,7 @@ namespace NupskouProject.Rashka {
                 }
                 
             
-        }
+        }*/
             }
 
 

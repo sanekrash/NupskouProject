@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using NupskouProject.Core;
 using NupskouProject.Math;
@@ -37,7 +38,6 @@ namespace NupskouProject.Rashka.Bullets {
 
         public override void Render () {
             var renderer = The.Renderer;
-
             renderer.BulletsBack.DrawCircle (_p, _color, _w);
             renderer.BulletsBack.DrawRay (_p, _rotation, _color, _w * 2, 1000);
         }
