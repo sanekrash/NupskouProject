@@ -19,7 +19,7 @@ namespace NupskouProject.Rashka {
         private int _danmakuInterval = The.Difficulty.Choose (45, 30, 20, 15);
         private int _danmakuInterval1 = The.Difficulty.Choose (20, 20, 20, 20);
 
-        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/6, Mathf.PI/6);
+        private float _cone = The.Difficulty.Choose (Mathf.PI/24 , Mathf.PI/24, Mathf.PI/6, Mathf.PI/3);
 
         
 
@@ -73,10 +73,10 @@ namespace NupskouProject.Rashka {
                     if (The.Difficulty >= Difficulty.Lunatic)
                     {
                         The.World.Spawn(new MarkRayTrigger(_p,
-                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone*2, 0-_cone), _w / 2f,
+                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone*1.5f, 0-_cone), _w / 2f,
                             Color.Red));
                         The.World.Spawn(new MarkRayTrigger(_p,
-                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, _cone*2), _w / 2f,
+                            XY.DirectionAngle(_p, The.Player.Position) + The.Random.Float(-_cone, _cone*1.5f), _w / 2f,
                             Color.Red));
                     }
 
