@@ -17,7 +17,7 @@ namespace NupskouProject.Raden.Skills {
 
         public override void Update (int t) {
             var world = The.World;
-            if (t == 30) {
+            if (t % 90 == 0) {
                 var v = new XY (The.Random.Angle ());
                 foreach (var w in Danmaku.Ring (4 * v, 12)) {
                     world.Spawn (new SunflowerRay (_p, w));

@@ -57,8 +57,6 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-                // рашка блять иди проходи ракеты на лунтике но мисс но бомб две минуты продержись
-                // азазазазазазазазазазазазаза я то прошел
                 Spawn (new RocketSpawner (BossPlace));
 //               Spawn(new SmileSpawner());
             }

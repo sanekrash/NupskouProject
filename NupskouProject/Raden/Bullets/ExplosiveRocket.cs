@@ -11,42 +11,41 @@ namespace NupskouProject.Raden.Bullets {
     public class ExplosiveRocket : Entity {
 
         private int   _tExplosion;
-        private XY    _p0, _p, _v;
+        private XY    _p0, _p;
         private XY    _target;
         private Color _color, _smokeColor;
+        private float _rotation;
 
 
-        public ExplosiveRocket (XY p0, float v, XY target, Color color) {
+        public ExplosiveRocket (XY p0, int tExplosion, XY target, Color color) {
             _p          = _p0 = p0;
-            _v          = (target - p0).WithLength (v);
+            _tExplosion = tExplosion;
+//            _v          = (target - p0).WithLength (v);
             _target     = target;
-            _tExplosion = Mathf.CeilToInt ((target - p0).Length / v);
+//            _tExplosion = Mathf.CeilToInt ((target - p0).Length / v);
             _smokeColor = (_color = color) * 0.2f;
+            _rotation = XY.DirectionAngle (_p0, _target);
         }
 
 
         public override void Update (int t) {
-            The.World.Spawn (new Smoke (_p - new XY (_v.Angle) * 5, _smokeColor, The.Random.Float (5, 10)));
-            _p = _p0 + t * _v;
+            The.World.Spawn (new Smoke (_p - new XY (_rotation) * 5, _smokeColor, The.Random.Float (5, 10)));
+//            _p = _p0 + t * _v;
+            _p = XY.Lerp (_p0, _target, t / (float) _tExplosion);
             if (t >= _tExplosion) Explode ();
         }
 
 
         public override void Render () {
-            The.Renderer.Bullets.DrawRocket (_p, _v.Angle, _color, 7);
+            The.Renderer.Bullets.DrawRocket (_p, _rotation, _color, 7);
         }
 
 
         private void Explode () {
             Despawn ();
 
-            // 1 16 3  48
-            // 2 16 2  64
-            // 2 12 3  72
-            // 2 16 3  96
-
             int ringSize = 20;
-            int lineSize = The.Difficulty == Difficulty.Lunatic ? 3 : 2;
+            int lineSize = 2;
 
             foreach (var v in Danmaku.Ring (XY.Up, ringSize))
             foreach (var w in Danmaku.Line (v, 1f, 1.5f, lineSize)) {

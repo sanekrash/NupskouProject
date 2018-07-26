@@ -20,7 +20,7 @@ namespace NupskouProject.Raden.Skills {
 
 
         public override void Update (int t) {
-            int interval = The.Difficulty.Choose (180, 120, 90, 60);
+            int interval = The.Difficulty.Choose (180, 150, 120, 90);
 
             if (t % interval == 0) {
                 var a = The.Random.Point (spawnBox);
