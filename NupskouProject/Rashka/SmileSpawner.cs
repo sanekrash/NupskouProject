@@ -21,14 +21,12 @@ namespace NupskouProject.Rashka {
                     6 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW (),
                     Color.Red
                     );
-                SpawnSmile (
-                    new XY (The.Random.Float (box.Left + 150, box.Right - 150), -100),
-                    6 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW (),
+                SpawnSmile(
+                    new XY(The.Random.Float(box.Left + 150, box.Right - 150), -100),
+                    6 * new XY(The.Random.SignedFloat() * Mathf.PI / 1.5f).Rotated90CCW(),
                     Color.OrangeRed
-
-                    new XY (The.Random.Float (box.Left, box.Right), -100),
-                    6 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW ()
                 );
+
             }
         }
 
