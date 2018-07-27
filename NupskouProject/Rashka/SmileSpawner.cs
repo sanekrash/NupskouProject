@@ -22,7 +22,7 @@ namespace NupskouProject.Rashka {
                     Color.Red
                     );
                 SpawnSmile(
-                    new XY(The.Random.Float(box.Left/2, box.Right ), -100),
+                    new XY(The.Random.Float(box.Right/2, box.Right ), -100),
                     5 * new XY(The.Random.SignedFloat() * Mathf.PI / 1.5f).Rotated90CCW(),
                     Color.Red
                 );
