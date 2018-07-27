@@ -16,7 +16,7 @@ namespace NupskouProject.Rashka {
         public override void Update (int t) {
             if (t % 15 == 0)
             {
-                SpawnSmile(new XY(The.Random.Float(World.Box.Left+150, World.Box.Right-150), 0),
+                SpawnSmile(new XY(The.Random.Float(World.Box.Left+150, World.Box.Right-150), 15),
                     6*(new XY(Mathf.PI/2+The.Random.Float(-Mathf.PI/3,Mathf.PI/3))));
             }
         }
