@@ -17,7 +17,7 @@ namespace NupskouProject.Rashka {
             if (t % 15 == 0) {
                 var box = World.Box;
                 SpawnSmile (
-                    new XY (The.Random.Float (box.Left + 150, box.Right - 150), -100),
+                    new XY (The.Random.Float (box.Left, box.Right), -100),
                     6 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW ()
                 );
             }
