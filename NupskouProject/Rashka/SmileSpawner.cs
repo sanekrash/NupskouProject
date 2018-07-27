@@ -18,12 +18,12 @@ namespace NupskouProject.Rashka {
                 var box = World.Box;
                 SpawnSmile (
                     new XY (The.Random.Float (box.Left , box.Right/2), -100),
-                    6 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW (),
+                    5 * new XY (The.Random.SignedFloat () * Mathf.PI / 1.5f).Rotated90CCW (),
                     Color.Red
                     );
                 SpawnSmile(
                     new XY(The.Random.Float(box.Left/2, box.Right ), -100),
-                    6 * new XY(The.Random.SignedFloat() * Mathf.PI / 1.5f).Rotated90CCW(),
+                    5 * new XY(The.Random.SignedFloat() * Mathf.PI / 1.5f).Rotated90CCW(),
                     Color.Red
                 );
 
