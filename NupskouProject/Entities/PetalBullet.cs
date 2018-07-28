@@ -34,7 +34,7 @@ namespace NupskouProject.Entities {
         public override void Render () {
             The.Renderer.Bullets.DrawPetal (_p, _rotation, _color,      4);
             The.Renderer.Bullets.DrawPetal (_p, _rotation, Color.White, 2.5f);
-//            The.Renderer.BulletsBack.DrawRay (_p, _rotation, _color * 0.1f, 3, 1000);
+            The.Renderer.BulletsBack.DrawRay (_p, _rotation, _color * 0.1f, 3, 1000);
         }
 
     }
