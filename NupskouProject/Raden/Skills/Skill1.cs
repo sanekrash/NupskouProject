@@ -19,11 +19,12 @@ namespace NupskouProject.Raden.Skills {
 
 
         public override void Update (int t) {
-            if (t % 60 >= 15) return;
-            var v = new XY (t * Mathf.phiAngle / 60);
-            foreach (var spawn in _spawns) {
-                The.World.Spawn (new PetalBullet (spawn, v, Color.Blue));
-                The.World.Spawn (new PetalBullet (spawn, v * 1.5f, Color.Blue));
+//            if (t % 60 >= 15) return;
+            if (t % 6 != 0) return;
+            var v = new XY (t * Mathf.phiAngle / 180);
+            foreach (var spawn in _spawns)
+            foreach (var w in Danmaku.Line (v, 1, 2, 1)) {
+                The.World.Spawn (new Bullet (spawn, w, Color.Blue));
             }
         }
 
