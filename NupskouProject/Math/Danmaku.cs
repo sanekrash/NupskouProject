@@ -46,6 +46,9 @@ namespace NupskouProject.Math {
 
 
         public static XY[] Line (XY dir, float minCoeff, float maxCoeff, int bullets) {
+            if (bullets == 1) {
+                return new[] {0.5f * (minCoeff + maxCoeff) * dir};
+            }
             var   arr = new XY [bullets];
             float div = bullets - 1;
             for (int i = 0; i < bullets; i++) {
