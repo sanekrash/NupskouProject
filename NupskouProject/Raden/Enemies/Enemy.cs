@@ -9,7 +9,7 @@ namespace NupskouProject.Raden.Enemies {
         private bool _spawned;
 
         public EntityComponent Movement;
-        public EntityComponent Attack;
+        public EntityComponent Spellcard;
         public EntityRenderer  Sprite;
 
 
@@ -20,7 +20,7 @@ namespace NupskouProject.Raden.Enemies {
 
         public override void Update (int t) {
             Movement.Update (t - Movement.T0);
-            Attack.Update (t - Attack.T0);
+            Spellcard.Update (t - Spellcard.T0);
         }
 
 
