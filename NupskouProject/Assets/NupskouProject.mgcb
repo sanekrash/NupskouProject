@@ -139,3 +139,9 @@
 /processorParam:Quality=Best
 /build:pjiu.wav
 
+#begin caution.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:caution.wav
+

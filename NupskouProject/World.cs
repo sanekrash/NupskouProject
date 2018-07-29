@@ -54,9 +54,9 @@ namespace NupskouProject {
         protected virtual void OnUpdate () {
             if (Time == 0) {
                 Spawn (The.Player = new Player (PlayerPlace));
-//                Spawn (new Raden.Stages.Stage1 ());
+                The.Assets.Caution.Play ();
             }
-            if (Time == 120) {
+            if (Time == 240) {
                 Spawn (new Revolt ());
             }
         }

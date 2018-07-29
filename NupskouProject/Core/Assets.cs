@@ -19,6 +19,7 @@ namespace NupskouProject.Core {
         public Texture2D Star;
 
         public SoundEffect Pjiu;
+        public SoundEffect Caution;
 
 
         public void Load (ContentManager content) {
@@ -33,7 +34,8 @@ namespace NupskouProject.Core {
             Arrow     = content.Load <Texture2D> ("arrow");
             Star      = content.Load <Texture2D> ("5star");
 
-            Pjiu = content.Load <SoundEffect> ("pjiu");
+            Pjiu    = content.Load <SoundEffect> ("pjiu");
+            Caution = content.Load <SoundEffect> ("caution");
         }
 
     }
