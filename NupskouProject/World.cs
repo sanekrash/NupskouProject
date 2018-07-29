@@ -57,14 +57,7 @@ namespace NupskouProject {
 //                Spawn (new Raden.Stages.Stage1 ());
             }
             if (Time == 120) {
-//                Spawn (new RocketSpawner (BossPlace));
-/*                Spawn (new Skill1 (
-                    new XY(0, 75),
-                    new XY(0, 675),
-                    new XY(600, 675),
-                    new XY(600, 75)
-                ));*/
-                Spawn( new YoukaiPolygraphSpawner(Box.Center));
+                Spawn (new Revolt ());
             }
         }
 

@@ -38,7 +38,7 @@ namespace NupskouProject.Utils {
             float size
         ) {
             batch.Draw (
-                The.Assets.PetalBullet,
+                The.Assets.Petal,
                 center,
                 new Rectangle (0, 0, 128, 128),
                 color,

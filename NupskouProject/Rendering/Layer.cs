@@ -89,6 +89,9 @@ namespace NupskouProject.Rendering {
         }
 
 
+        public void DrawStar (XY center, float rotation, Color color, float size) {
+            _sprites.Add (Sprite.Star (center, rotation, color, size));
+        }
 
 
         public void Render (SpriteBatch spriteBatch) {

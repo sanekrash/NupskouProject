@@ -79,6 +79,7 @@
     <Compile Include="Raden\Skills\Recursion.cs" />
     <Compile Include="Raden\Skills\DigitSpawner.cs" />
     <Compile Include="Raden\Skills\DoubleSpiral.cs" />
+    <Compile Include="Raden\Skills\Revolt.cs" />
     <Compile Include="Raden\Skills\RocketSpawner.cs" />
     <Compile Include="Raden\Skills\Skill1.cs" />
     <Compile Include="Raden\Skills\Sunflower.cs" />

@@ -50,7 +50,7 @@ namespace NupskouProject.Rendering {
 
         public static Sprite Petal (XY center, float rotation, Color color, float size) =>
         new Sprite (
-            The.Assets.PetalBullet,
+            The.Assets.Petal,
             center,
             new Rectangle (0, 0, 128, 128),
             color,
@@ -72,6 +72,19 @@ namespace NupskouProject.Rendering {
         );
 
 
+        public static Sprite Star (XY center, float rotation, Color color, float size) =>
+        new Sprite (
+            The.Assets.Star,
+            center,
+            new Rectangle (0, 0, 256, 256),
+            color,
+            rotation,
+            new Vector2 (128),
+            new Vector2 (size / 80)
+        );
+
+
+
         public void Render (SpriteBatch spriteBatch) {
             spriteBatch.Draw (
                 _texture,
@@ -85,7 +98,6 @@ namespace NupskouProject.Rendering {
                 0
             );
         }
-
     }
 
 }

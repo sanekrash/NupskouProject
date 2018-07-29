@@ -22,7 +22,7 @@ namespace NupskouProject.Raden.Bullets {
 
 
         public override void Update (int t) {
-            const int duration = 60;
+            const int duration = 15;
             if (t >= duration) {
                 Despawn ();
                 return;
