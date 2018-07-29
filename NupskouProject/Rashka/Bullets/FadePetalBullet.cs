@@ -16,11 +16,10 @@ namespace NupskouProject.Entities {
         private XY _p;
 
 
-        public FadePetalBullet (XY p0, XY v, Color color, float duration) {
+        public FadePetalBullet (XY p0, float rotation, Color color, float duration) {
             _p        = _p0 = p0;
-            _v        = v;
+            _rotation = rotation + Mathf.PI/2;
             _color    = color;
-            _rotation = _v.Angle;
             _duration = duration;
         }
 

@@ -44,7 +44,7 @@ namespace NupskouProject.Rashka
                     The.World.Spawn(
                         new FadePetalBullet(
                             new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3)*_r),
-                            new XY(0,0),
+                            XY.DirectionAngle(_p,new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3)*_r)),
                             Color.Red,
                             (Mathf.PI/3) / (Mathf.PI / _danmakuInterval)
                         )
