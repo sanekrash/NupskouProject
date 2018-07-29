@@ -6,7 +6,7 @@ using NupskouProject.Math;
 
 namespace NupskouProject.Rashka.Bullets {
 
-    public class MarkRay : Entity {
+    public class DeathRay : Entity {
 
         private readonly XY    _p;
         private readonly float _rotation;
@@ -15,7 +15,7 @@ namespace NupskouProject.Rashka.Bullets {
         private Color _color;
 
 
-        public MarkRay (XY p, float rotation, float w, Color color) {
+        public DeathRay (XY p, float rotation, float w, Color color) {
             _p        = p;
             _rotation = rotation;
             _w        = w;
@@ -24,7 +24,7 @@ namespace NupskouProject.Rashka.Bullets {
 
 
         public override void Update (int t) {
-            const int duration = 120;
+            const int duration = 2;
             if (t >= duration) {
                 Despawn ();
             }
@@ -34,10 +34,8 @@ namespace NupskouProject.Rashka.Bullets {
         public override void Render () {
             var renderer = The.Renderer;
 
-            renderer.BulletsBack.DrawCircle (_p, _color, 1);
-            renderer.BulletsBack.DrawRay (_p, _rotation, _color, 2, 1000);
-            renderer.Bullets.DrawCircle (_p, Color.White, 0.5f);
-            renderer.Bullets.DrawRay (_p, _rotation, Color.White, 1, 1000);
+            renderer.BulletsBack.DrawCircle (_p, _color, _w);
+            renderer.BulletsBack.DrawRay (_p, _rotation, _color, _w, 1000);
         }
 
     }

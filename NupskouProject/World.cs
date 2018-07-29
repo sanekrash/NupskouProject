@@ -64,7 +64,7 @@ namespace NupskouProject {
                     new XY(600, 675),
                     new XY(600, 75)
                 ));*/
-                Spawn( new SmileSpawner());
+                Spawn( new YoukaiPolygraphSpawner(Box.Center));
             }
         }
 
