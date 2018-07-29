@@ -26,62 +26,17 @@ namespace NupskouProject.Rashka
             var world = The.World;
             _angle = XY.DirectionAngle(_p, The.Player.Position);
             _r = XY.Distance(_p, The.Player.Position);
-            world.Spawn(
-                new DeathRay(
-                    _p,
-                    0 + Mathf.PI / _danmakuInterval * t,
-                    3,
-                    Color.Red
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    Mathf.PI / 3 + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Purple
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    2 * Mathf.PI / 3 + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Red
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    Mathf.PI + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Purple
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    - Mathf.PI / 3 + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Purple
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    - 2 * Mathf.PI / 3 + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Red
-                )
-            );
-            world.Spawn(
-                new DeathRay(
-                    _p, 
-                    - Mathf.PI + Mathf.PI/_danmakuInterval * t,
-                    3,
-                    Color.Purple
-                )
-            );
+            for (int i = 0; i < 6; i++)
+            {
+                world.Spawn(
+                    new DeathRay(
+                        _p,
+                        0 + Mathf.PI / _danmakuInterval * t + Mathf.PI / 3 * i,
+                        3,
+                        Color.Red
+                    )
+                );
+            }
             if (t % 6 == 0)
             {
                 for (int i = 0; i < 6; i++)
