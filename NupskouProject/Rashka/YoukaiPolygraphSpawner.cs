@@ -26,12 +26,12 @@ namespace NupskouProject.Rashka
             var world = The.World;
             _angle = XY.DirectionAngle(_p, The.Player.Position);
             _r = XY.Distance(_p, The.Player.Position);
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 8; i++)
             {
                 world.Spawn(
                     new DeathRay(
                         _p,
-                        0 + Mathf.PI / _danmakuInterval * t + Mathf.PI / 3 * i,
+                        0 + Mathf.PI / _danmakuInterval * t + Mathf.PI / 4 * i,
                         3,
                         Color.Red
                     )
@@ -39,14 +39,14 @@ namespace NupskouProject.Rashka
             }
             if (t % 6 == 0)
             {
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     The.World.Spawn(
                         new FadePetalBullet(
-                            new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3)*_r),
-                            XY.DirectionAngle(_p,new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3)*_r)),
+                            new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4)*_r),
+                            XY.DirectionAngle(_p,new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4)*_r)),
                             Color.Red,
-                            (Mathf.PI/3) / (Mathf.PI / _danmakuInterval)
+                            (Mathf.PI/4) / (Mathf.PI / _danmakuInterval)
                         )
                     );
                 }
