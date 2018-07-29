@@ -23,7 +23,7 @@ namespace NupskouProject.Raden.Skills {
             if (t % 6 != 0) return;
             var v = new XY (t * Mathf.phiAngle / 180);
             foreach (var spawn in _spawns)
-            foreach (var w in Danmaku.Line (v, 1, 2, 1)) {
+            foreach (var w in Danmaku.Line (v, 1, 2, 2)) {
                 The.World.Spawn (new Bullet (spawn, w, Color.Blue));
             }
         }
