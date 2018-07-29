@@ -46,7 +46,7 @@ namespace NupskouProject.Rashka
                             new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4)*_r),
                             XY.DirectionAngle(_p,new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/4)*_r)),
                             Color.Red,
-                            (Mathf.PI/4) / (Mathf.PI / _danmakuInterval)
+                            Mathf.PI/4 / (Mathf.PI / _danmakuInterval)
                         )
                     );
                 }
