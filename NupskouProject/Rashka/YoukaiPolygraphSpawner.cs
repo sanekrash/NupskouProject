@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using NupskouProject.Core;
 using NupskouProject.Entities;
@@ -11,9 +12,10 @@ namespace NupskouProject.Rashka
     public class YoukaiPolygraphSpawner: Entity
     {
         private XY  _p;
-        private float _angle = 0;
+        private float _angle;
         private float _danmakuInterval = 720;
         private float _r;
+        
         public YoukaiPolygraphSpawner (XY p) {
             _p = p;
         }
@@ -22,6 +24,7 @@ namespace NupskouProject.Rashka
         public override void Update(int t)
         {
             var world = The.World;
+            _angle = XY.DirectionAngle(_p, The.Player.Position);
             _r = XY.Distance(_p, The.Player.Position);
             world.Spawn(
                 new DeathRay(
@@ -79,15 +82,20 @@ namespace NupskouProject.Rashka
                     Color.Purple
                 )
             );
-            if (t % 5 == 0)
+            if (t % 6 == 0)
             {
-                The.World.Spawn(
-                    new PetalBullet(
-                        new XY(_p.X+ Mathf.Cos(0) *_r, _p.Y+ Mathf.Sin(0)*_r),
-                        new XY(0,0),
-                        Color.Red
-                    )
-                );
+                for (int i = 0; i < 6; i++)
+                {
+                    The.World.Spawn(
+                        new FadePetalBullet(
+                            new XY(_p.X+ Mathf.Cos(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3) *_r, _p.Y+ Mathf.Sin(Mathf.PI/_danmakuInterval * t + i * Mathf.PI/3)*_r),
+                            new XY(0,0),
+                            Color.Red,
+                            (Mathf.PI/3) / (Mathf.PI / _danmakuInterval)
+                        )
+                    );
+                }
+
             }
         }
     }

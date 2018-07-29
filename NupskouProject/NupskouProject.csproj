@@ -90,6 +90,7 @@
     <Compile Include="Raden\Wave.cs" />
     <Compile Include="Rashka\Bullets\Arrow.cs" />
     <Compile Include="Rashka\Bullets\BounceArrow.cs" />
+    <Compile Include="Rashka\Bullets\FadePetalBullet.cs" />
     <Compile Include="Rashka\Bullets\VerticalBounceBullet.cs" />
     <Compile Include="Rashka\Bullets\DeathRay.cs" />
     <Compile Include="Rashka\Bullets\MarkRayTrigger.cs" />
