@@ -10,7 +10,7 @@ namespace NupskouProject.Core {
         public static World       World      = new World ();
         public static Random      Random     = new Random ();
         public static Renderer    Renderer   = new Renderer ();
-        public static Difficulty  Difficulty = Difficulty.Normal;
+        public static Difficulty  Difficulty = Difficulty.Lunatic;
 
 //        public static SpriteBatch SpriteBatch;
 
