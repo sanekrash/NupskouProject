@@ -11,10 +11,10 @@ namespace NupskouProject.Raden.Skills {
     public class Revolt : Entity {
 
         public override void Update (int t) {
-            if (t % 30 != 0) return;
+            if (t % 60 != 0) return;
 
-            The.Assets.Pjiu.Play (0.5f, -0.75f, 0.0f);
-//            The.Assets.Pjiu.Play ();
+//            The.Assets.Pjiu.Play (0.5f, -0.75f, 0.0f);
+            The.Assets.Pjiu.Play ();
 
             var world = The.World;
             Fire2Gsom (new XY (300, 250), -t * 0.01f - Mathf.PI / 6);

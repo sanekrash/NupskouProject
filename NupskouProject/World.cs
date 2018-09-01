@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework.Audio;
 using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Skills;
@@ -57,7 +58,7 @@ namespace NupskouProject {
                 The.Assets.Caution.Play ();
             }
             if (Time == 240) {
-                Spawn (new Revolt ());
+                Spawn (new RocketSpawner (BossPlace));
             }
         }
 
