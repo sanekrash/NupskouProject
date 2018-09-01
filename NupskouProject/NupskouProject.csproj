@@ -96,6 +96,7 @@
     <Compile Include="Rashka\Bullets\DeathRay.cs" />
     <Compile Include="Rashka\Bullets\MarkRayTrigger.cs" />
     <Compile Include="Rashka\Bullets\RayCast.cs" />
+    <Compile Include="Rashka\Nonspells\MultipleShotSpraySpawner.cs" />
     <Compile Include="Rashka\ShootTheLalkaSpawner.cs" />
     <Compile Include="Rashka\SmileSpawner.cs" />
     <Compile Include="Rashka\TornadoShotSpawner.cs" />
