@@ -5,7 +5,7 @@ using NupskouProject.Core;
 using NupskouProject.Math;
 using NupskouProject.Raden.Skills;
 using NupskouProject.Rashka;
-using NupskouProject.Rashka.Nonspells;
+
 
 
 namespace NupskouProject {
